@@ -1,21 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import java.lang.*?>
 <?import javafx.scene.image.*?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="600" maxWidth="1000" minHeight="600" minWidth="1000" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="backgroundImageView" fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true" visible="true" x="5" y="5">
          <image>
-            <Image url="@../../resources/Background.png" />
+            <Image url="@../Background.png" />
          </image>
       </ImageView>
-      <Button layoutX="287.0" layoutY="289.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="429.0" text="Button" />
-      <Button defaultButton="true" layoutX="287.0" layoutY="212.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="429.0" text="开始游戏" />
-      <Button layoutX="287.0" layoutY="363.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="429.0" text="Button" />
-      <Button layoutX="287.0" layoutY="433.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="429.0" text="Button" />
+      <ImageView fx:id="startButton" fitHeight="55.0" fitWidth="500.0" layoutX="339.0" layoutY="282.0" onMouseClicked="#clickStartButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../startImage.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="historyButton" fitHeight="55.0" fitWidth="500.0" layoutX="339.0" layoutY="351.0" onMouseClicked="#clickHistoryButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../historyImage.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="aboutButton" fitHeight="55.0" fitWidth="500.0" layoutX="339.0" layoutY="416.0" onMouseClicked="#clickAboutButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../aboutImage.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="exitButton" fitHeight="55.0" fitWidth="500.0" layoutX="339.0" layoutY="483.0" onMouseClicked="#clickExitButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../exitImage.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>
