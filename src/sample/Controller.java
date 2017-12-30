@@ -4,6 +4,7 @@ import Field.Field;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
@@ -18,6 +19,7 @@ import java.awt.datatransfer.Transferable;
 import java.awt.event.MouseAdapter;
 import java.io.File;
 import java.io.IOException;
+import java.security.Key;
 
 public class Controller {
     @FXML
@@ -44,11 +46,12 @@ public class Controller {
     private ImageView [][] fieldImageViews;
     private Field field;
     private int Mode; //0=not start 1= new game 2=history game
+    private int Step; //history step
+    private String historyFilename;
 
     public Controller(){
         Mode = 0;
-        field = new Field();
-        fieldImageViews = new ImageView[field.sizeX][field.sizeY];
+        Step = 0;
     }
 
     @FXML
@@ -60,18 +63,25 @@ public class Controller {
         exitButton.setVisible(false);
         aboutButton.setVisible(false);
         fieldPane.setDisable(false);
+        fieldPane.setVisible(true);
+        mainPane.setFocusTraversable(true);
+        mainPane.requestFocus();
+        Mode = 1;
         //战斗 TODO
+        field = new Field();
+        fieldImageViews = new ImageView[field.sizeX][field.sizeY];
         field.getReady();
         display(field);
     }
 
     void display(Field field){
-        for(int i = 0; i < field.sizeX; ++i)
-            for(int j = 0; j < field.sizeY; ++j){
+        for(int i = 0; i < field.sizeX; ++i) {
+            for (int j = 0; j < field.sizeY; ++j) {
                 fieldImageViews[i][j] = new ImageView();
                 fieldImageViews[i][j].setImage(field.getCreatures()[i][j].report());
                 fieldPane.add(fieldImageViews[i][j], i, j);
             }
+        }
     }
 
     @FXML
@@ -99,8 +109,12 @@ public class Controller {
             historyButton.setVisible(false);
             exitButton.setVisible(false);
             aboutButton.setVisible(false);
+            fieldPane.setDisable(false);
             //读取文件 载入战斗场面 TODO
-            field.getHistoryField(file.getName(), 0);
+            Mode = 2;
+            Step = 0;
+            historyFilename = file.getName();
+            field.getHistoryField(historyFilename, Step++);
             display(field);
         }
     }
@@ -124,7 +138,11 @@ public class Controller {
         clip.setContents(tText, null);
         //显示对话框
         JOptionPane jOptionPane = new JOptionPane();
+        jOptionPane.setFocusable(true);
+        jOptionPane.requestFocus();
         jOptionPane.showMessageDialog(null, jPanel, "关于 葫芦娃V1.0", JOptionPane.INFORMATION_MESSAGE);
+        mainPane.setFocusTraversable(true);
+        mainPane.requestFocus();
     }
 
     @FXML
@@ -133,16 +151,41 @@ public class Controller {
     }
 
     void gameOver(){
+        for(int i = 0; i < field.sizeX; ++i)
+            for(int j = 0; j < field.sizeY; ++j)
+                fieldImageViews[i][j] = null;
+        field = null;
+        fieldPane.setVisible(false);
+        fieldPane.setDisable(true);
         backgroundImageView.setImage(new Image(this.getClass().getResourceAsStream("/Background.png")));
         startButton.setVisible(true);
         historyButton.setVisible(true);
         exitButton.setVisible(true);
         aboutButton.setVisible(true);
+        Mode = 0;
     }
 
     @FXML
     void pressKeyEventHandler(KeyEvent keyEvent){
-        System.out.println("1");
+        System.out.println(keyEvent.getCode());
+        if(Mode == 0){
+            if(keyEvent.getCode() == KeyCode.L)
+                clickHistoryButton(null);
+        }
+        else if(Mode == 1){
+            if(keyEvent.getCode() == KeyCode.ESCAPE)
+                gameOver();
+            else if(keyEvent.getCode() == KeyCode.SPACE){
+                field.move();
+                display(field);
+            }
+        }
+        else if(Mode == 2){
+            if(keyEvent.getCode() == KeyCode.ESCAPE)
+                gameOver();
+            else if(keyEvent.getCode() == KeyCode.SPACE)
+                field.getHistoryField(historyFilename, Step++);
+        }
     }
 }
 

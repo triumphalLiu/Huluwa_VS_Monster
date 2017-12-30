@@ -8,7 +8,7 @@ public class Space implements Creature {
 
     @Override
     public Image report() {
-        return null;
+        return new Image(this.getClass().getResourceAsStream("/Empty.png"));
     }
 
     @Override
@@ -19,6 +19,11 @@ public class Space implements Creature {
 
     @Override
     public Position getPosition() {
-        return null;
+        return position;
+    }
+
+    @Override
+    public int getSide(){
+        return 0;
     }
 }

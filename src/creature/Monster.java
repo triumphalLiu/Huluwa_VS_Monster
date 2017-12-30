@@ -4,6 +4,9 @@ import javafx.scene.image.Image;
 
 public class Monster implements Creature{
     private Position position;
+
+
+
     @Override
     public Image report(){
         return null;
@@ -18,5 +21,10 @@ public class Monster implements Creature{
     @Override
     public Position getPosition(){
         return position;
+    }
+
+    @Override
+    public int getSide(){
+        return -1;
     }
 }

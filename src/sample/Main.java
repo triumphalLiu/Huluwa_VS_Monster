@@ -13,7 +13,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Huluwa VS Monster");
-        primaryStage.setScene(new Scene(root, 1000, 600));
+        Scene scene = new Scene(root,1000,600);
+        primaryStage.setScene(scene);
         primaryStage.getIcons().add(new Image(this.getClass().getResourceAsStream("/icon.png")));
         primaryStage.show();
         primaryStage.setResizable(false);

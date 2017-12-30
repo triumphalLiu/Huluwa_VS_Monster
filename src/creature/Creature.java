@@ -7,4 +7,5 @@ public interface Creature {
     public Image report();
     public void setPosition(Position position);
     public Position getPosition();
+    public int getSide();
 }

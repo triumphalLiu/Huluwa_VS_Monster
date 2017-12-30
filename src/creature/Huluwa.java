@@ -67,4 +67,9 @@ public class Huluwa implements Creature {
         else
             return false;
     }
+
+    @Override
+    public int getSide(){
+        return 1;
+    }
 }

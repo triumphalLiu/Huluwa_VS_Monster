@@ -9,15 +9,4 @@ public class Snake extends Monster {
     public Image report(){
         return new Image(this.getClass().getResourceAsStream("/Snake.png"));
     }
-
-    @Override
-    public void setPosition(Position position){
-        this.position = position;
-        position.setHolder(this);
-    }
-
-    @Override
-    public Position getPosition(){
-        return position;
-    }
 }

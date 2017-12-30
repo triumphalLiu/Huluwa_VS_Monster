@@ -35,19 +35,42 @@ public class Field {
         this.positions[x][y].setHolder(creature);
     }
 
-    public void getReady(){
+    public <Template extends Creature> void Delete(int x, int y){
+        Creature p = new Space();
+        this.creatures[x][y] = p;
+        this.positions[x][y].setHolder(p);
+    }
+
+    public void getReady(){ //准备战斗
         ArrayList<Huluwa> brothers = new ArrayList<Huluwa>();
         for (int i = 0; i < 7; i++) {
             brothers.add(new Huluwa(Huluwa.COLOR.values()[i], Huluwa.SENIORITY.values()[i]));
             Add(0,i,brothers.get(i));
         }
         Add(0,7,new Grandpa());
-        Add(2,0,new Xiezijing());
-        Add(3,0,new Xiaolouluo());
-        Add(4,0,new Snake());
+        Add(8,0,new Xiezijing());
+        Add(9,0,new Xiaolouluo());
+        Add(10,0,new Snake());
     }
 
-    public void getHistoryField(String filename, int step){
+    public void getHistoryField(String filename, int step){ //读取文件加载历史
 
+    }
+
+    public void move(){ //移动
+        for(int j = 0; j < this.sizeY; ++j){
+            if(creatures[0][j].getSide() == 1){
+                Creature creature = creatures[0][j];
+                Delete(0,j);
+                Add(1,j,creature);
+            }
+        }
+
+        for(int i = 0; i < this.sizeX; ++i) {
+            for (int j = 0; j < this.sizeY; ++j) {
+                System.out.print(creatures[i][j].getClass());
+            }
+            System.out.println();
+        }
     }
 }

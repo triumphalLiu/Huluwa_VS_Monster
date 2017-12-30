@@ -20,4 +20,9 @@ public class Grandpa implements Creature {
     public Position getPosition(){
         return position;
     }
+
+    @Override
+    public int getSide(){
+        return 1;
+    }
 }
