@@ -1,13 +1,16 @@
 package sample;
 
+import Field.Field;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
-import javax.swing.plaf.basic.BasicListUI;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -17,6 +20,12 @@ import java.io.File;
 import java.io.IOException;
 
 public class Controller {
+    @FXML
+    private GridPane fieldPane;
+
+    @FXML
+    private Pane mainPane;
+
     @FXML
     private ImageView backgroundImageView;
 
@@ -32,6 +41,16 @@ public class Controller {
     @FXML
     private ImageView aboutButton;
 
+    private ImageView [][] fieldImageViews;
+    private Field field;
+    private int Mode; //0=not start 1= new game 2=history game
+
+    public Controller(){
+        Mode = 0;
+        field = new Field();
+        fieldImageViews = new ImageView[field.sizeX][field.sizeY];
+    }
+
     @FXML
     void clickStartButton(MouseEvent event){
         //更换战斗背景 隐藏控件
@@ -40,18 +59,38 @@ public class Controller {
         historyButton.setVisible(false);
         exitButton.setVisible(false);
         aboutButton.setVisible(false);
+        fieldPane.setDisable(false);
         //战斗 TODO
+        field.getReady();
+        display(field);
+    }
+
+    void display(Field field){
+        for(int i = 0; i < field.sizeX; ++i)
+            for(int j = 0; j < field.sizeY; ++j){
+                fieldImageViews[i][j] = new ImageView();
+                fieldImageViews[i][j].setImage(field.getCreatures()[i][j].report());
+                fieldPane.add(fieldImageViews[i][j], i, j);
+            }
     }
 
     @FXML
     void clickHistoryButton(MouseEvent event){
+        try {
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+            //UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        }
+        catch(Exception e) {
+            System.out.println(e.getStackTrace());
+        }
         //打开选择文件对话框
         JFileChooser jFileChooser = new JFileChooser(".");
         jFileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
         HLWFileFilter hlwFileFilter = new HLWFileFilter();
         jFileChooser.addChoosableFileFilter(hlwFileFilter);
         jFileChooser.setFileFilter(hlwFileFilter);
-        jFileChooser.showDialog(new JLabel(), "选择回放文件");
+        jFileChooser.setDialogTitle("选择回放文件");
+        jFileChooser.showOpenDialog(null);
         File file = jFileChooser.getSelectedFile();
         if(file != null && file.exists()) {
             System.out.println("文件:" + file.getAbsolutePath());
@@ -61,6 +100,8 @@ public class Controller {
             exitButton.setVisible(false);
             aboutButton.setVisible(false);
             //读取文件 载入战斗场面 TODO
+            field.getHistoryField(file.getName(), 0);
+            display(field);
         }
     }
 
@@ -83,23 +124,25 @@ public class Controller {
         clip.setContents(tText, null);
         //显示对话框
         JOptionPane jOptionPane = new JOptionPane();
-        jOptionPane.setFocusable(true);
-        jOptionPane.requestFocus();
-        jPanel.setFocusable(true);
-        jPanel.requestFocus();
-        jPanel.getComponent(0).setFocusable(true);
-        jPanel.getComponent(0).requestFocus();
-        System.out.println(jPanel.getFocusListeners());
-        System.out.println(jPanel.isFocusOwner());
-        System.out.println(jPanel.getComponent(0).isFocusOwner());
-        System.out.println(jPanel.getComponent(1).isFocusOwner());
-        System.out.println(jOptionPane.isFocusOwner());
         jOptionPane.showMessageDialog(null, jPanel, "关于 葫芦娃V1.0", JOptionPane.INFORMATION_MESSAGE);
     }
 
     @FXML
     void clickExitButton(MouseEvent event){
         System.exit(0);
+    }
+
+    void gameOver(){
+        backgroundImageView.setImage(new Image(this.getClass().getResourceAsStream("/Background.png")));
+        startButton.setVisible(true);
+        historyButton.setVisible(true);
+        exitButton.setVisible(true);
+        aboutButton.setVisible(true);
+    }
+
+    @FXML
+    void pressKeyEventHandler(KeyEvent keyEvent){
+        System.out.println("1");
     }
 }
 
