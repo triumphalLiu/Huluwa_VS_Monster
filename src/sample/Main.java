@@ -11,13 +11,17 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(this.getClass().getResource("sample.fxml"));
+        Parent root = fxmlLoader.load();
         primaryStage.setTitle("Huluwa VS Monster");
         Scene scene = new Scene(root,1000,600);
         primaryStage.setScene(scene);
         primaryStage.getIcons().add(new Image(this.getClass().getResourceAsStream("/icon.png")));
-        primaryStage.show();
         primaryStage.setResizable(false);
+        Controller controller = fxmlLoader.getController();
+        controller.InitController();
+        primaryStage.show();
     }
 
     public static void main(String[] args) {

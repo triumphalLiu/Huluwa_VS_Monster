@@ -19,7 +19,6 @@ import java.awt.datatransfer.Transferable;
 import java.awt.event.MouseAdapter;
 import java.io.File;
 import java.io.IOException;
-import java.security.Key;
 
 public class Controller {
     @FXML
@@ -53,6 +52,11 @@ public class Controller {
         Step = 0;
     }
 
+    public void InitController(){
+        mainPane.setFocusTraversable(true);
+        mainPane.requestFocus();
+    }
+
     @FXML
     void clickStartButton(MouseEvent event){
         //更换战斗背景 隐藏控件
@@ -63,8 +67,6 @@ public class Controller {
         aboutButton.setVisible(false);
         fieldPane.setDisable(false);
         fieldPane.setVisible(true);
-        mainPane.setFocusTraversable(true);
-        mainPane.requestFocus();
         Mode = 1;
         //战斗 TODO
         field = new Field();
@@ -135,11 +137,7 @@ public class Controller {
         clip.setContents(tText, null);
         //显示对话框
         JOptionPane jOptionPane = new JOptionPane();
-        jOptionPane.setFocusable(true);
-        jOptionPane.requestFocus();
         jOptionPane.showMessageDialog(null, jPanel, "关于 葫芦娃V1.0", JOptionPane.INFORMATION_MESSAGE);
-        mainPane.setFocusTraversable(true);
-        mainPane.requestFocus();
     }
 
     @FXML
