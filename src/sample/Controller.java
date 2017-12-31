@@ -19,6 +19,8 @@ import java.awt.datatransfer.Transferable;
 import java.awt.event.MouseAdapter;
 import java.io.File;
 import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Controller {
     @FXML
@@ -47,12 +49,11 @@ public class Controller {
     private int Step; //history step
     private String historyFilename;
 
-    public Controller(){
+    public void InitController(){
         Mode = 0;
         Step = 0;
-    }
-
-    public void InitController(){
+        field = null;
+        historyFilename = "";
         mainPane.setFocusTraversable(true);
         mainPane.requestFocus();
     }
@@ -60,21 +61,30 @@ public class Controller {
     @FXML
     void clickStartButton(MouseEvent event){
         //更换战斗背景 隐藏控件
-        backgroundImageView.setImage(new Image(this.getClass().getResourceAsStream("/fightScene1.png")));
         startButton.setVisible(false);
         historyButton.setVisible(false);
         exitButton.setVisible(false);
         aboutButton.setVisible(false);
-        fieldPane.setDisable(false);
-        fieldPane.setVisible(true);
-        Mode = 1;
-        //战斗 TODO
-        field = new Field();
-        field.getReady();
-        display(field);
+        new Animation().fade_out_in(backgroundImageView, new Image(this.getClass().getResourceAsStream("/fightScene1.png")));
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                fieldPane.setDisable(false);
+                fieldPane.setVisible(true);
+                Mode = 1;
+                //战斗 TODO
+                field = new Field();
+                field.getReady();
+                display(field);
+                this.cancel();
+            }
+        }, 1500);
     }
 
     void display(Field field){
+        if(field == null)
+            return;
         for(int i = 0; i < field.sizeX; ++i) {
             for (int j = 0; j < field.sizeY; ++j) {
                 ImageView tmp = (ImageView) fieldPane.getChildren().get(field.sizeX*j+i);
@@ -103,18 +113,24 @@ public class Controller {
         File file = jFileChooser.getSelectedFile();
         if(file != null && file.exists()) {
             System.out.println("文件:" + file.getAbsolutePath());
-            backgroundImageView.setImage(new Image(this.getClass().getResourceAsStream("/fightScene2.png")));
             startButton.setVisible(false);
             historyButton.setVisible(false);
             exitButton.setVisible(false);
             aboutButton.setVisible(false);
-            fieldPane.setDisable(false);
-            //读取文件 载入战斗场面 TODO
-            Mode = 2;
-            Step = 0;
-            historyFilename = file.getName();
-            field.getHistoryField(historyFilename, Step++);
-            display(field);
+            new Animation().fade_out_in(backgroundImageView, new Image(this.getClass().getResourceAsStream("/fightScene2.png")));
+            Timer timer = new Timer();
+            timer.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    fieldPane.setDisable(false);
+                    Mode = 2;
+                    Step = 0;
+                    historyFilename = file.getName();
+                    field = new Field();
+                    field.getHistoryField(historyFilename, Step++);
+                    display(field);
+                }
+            }, 1500);
         }
     }
 
@@ -146,15 +162,21 @@ public class Controller {
     }
 
     void gameOver(){
+        Mode = 0;
         field = null;
         fieldPane.setVisible(false);
         fieldPane.setDisable(true);
-        backgroundImageView.setImage(new Image(this.getClass().getResourceAsStream("/Background.png")));
-        startButton.setVisible(true);
-        historyButton.setVisible(true);
-        exitButton.setVisible(true);
-        aboutButton.setVisible(true);
-        Mode = 0;
+        new Animation().fade_out_in(backgroundImageView, new Image(this.getClass().getResourceAsStream("/Background.png")));
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                startButton.setVisible(true);
+                historyButton.setVisible(true);
+                exitButton.setVisible(true);
+                aboutButton.setVisible(true);
+            }
+        }, 1500);
     }
 
     @FXML

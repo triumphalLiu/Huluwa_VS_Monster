@@ -1,6 +1,9 @@
 package Field;
 
 import creature.*;
+import stratagem.ChangsheStratagem;
+import stratagem.HeyiStratagem;
+import stratagem.YanxingStratagem;
 
 import java.util.ArrayList;
 
@@ -42,15 +45,26 @@ public class Field {
     }
 
     public void getReady(){ //准备战斗
+        ArrayList<Creature> goodGuys = new ArrayList<Creature>();
         ArrayList<Huluwa> brothers = new ArrayList<Huluwa>();
         for (int i = 0; i < 7; i++) {
             brothers.add(new Huluwa(Huluwa.COLOR.values()[i], Huluwa.SENIORITY.values()[i]));
-            Add(0,i,brothers.get(i));
         }
-        Add(0,7,new Grandpa());
-        Add(8,0,new Xiezijing());
-        Add(9,0,new Xiaolouluo());
-        Add(10,0,new Snake());
+        goodGuys.addAll(brothers);
+        goodGuys.add(new Grandpa());
+        new ChangsheStratagem().generate(0,0,goodGuys,this);
+
+        ArrayList<Monster> badGuys = new ArrayList<Monster>();
+
+        badGuys.add(new Xiaolouluo());
+        badGuys.add(new Xiaolouluo());
+        badGuys.add(new Xiaolouluo());
+        badGuys.add(new Xiezijing());
+        badGuys.add(new Snake());
+        badGuys.add(new Xiaolouluo());
+        badGuys.add(new Xiaolouluo());
+        badGuys.add(new Xiaolouluo());
+        new HeyiStratagem().generate(8,0,badGuys,this);
     }
 
     public void getHistoryField(String filename, int step){ //读取文件加载历史
