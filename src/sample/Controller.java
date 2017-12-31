@@ -43,7 +43,6 @@ public class Controller {
     @FXML
     private ImageView aboutButton;
 
-    private ImageView [][] fieldImageViews;
     private Field field;
     private int Mode; //0=not start 1= new game 2=history game
     private int Step; //history step
@@ -69,7 +68,6 @@ public class Controller {
         Mode = 1;
         //战斗 TODO
         field = new Field();
-        fieldImageViews = new ImageView[field.sizeX][field.sizeY];
         field.getReady();
         display(field);
     }
@@ -77,9 +75,8 @@ public class Controller {
     void display(Field field){
         for(int i = 0; i < field.sizeX; ++i) {
             for (int j = 0; j < field.sizeY; ++j) {
-                fieldImageViews[i][j] = new ImageView();
-                fieldImageViews[i][j].setImage(field.getCreatures()[i][j].report());
-                fieldPane.add(fieldImageViews[i][j], i, j);
+                ImageView tmp = (ImageView) fieldPane.getChildren().get(field.sizeX*j+i);
+                tmp.setImage(field.getCreatures()[i][j].report());
             }
         }
     }
@@ -151,9 +148,6 @@ public class Controller {
     }
 
     void gameOver(){
-        for(int i = 0; i < field.sizeX; ++i)
-            for(int j = 0; j < field.sizeY; ++j)
-                fieldImageViews[i][j] = null;
         field = null;
         fieldPane.setVisible(false);
         fieldPane.setDisable(true);
