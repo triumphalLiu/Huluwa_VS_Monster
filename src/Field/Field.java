@@ -79,12 +79,5 @@ public class Field {
                 Add(1,j,creature);
             }
         }
-
-        for(int i = 0; i < this.sizeX; ++i) {
-            for (int j = 0; j < this.sizeY; ++j) {
-                System.out.print(creatures[i][j].getClass());
-            }
-            System.out.println();
-        }
     }
 }
