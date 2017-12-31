@@ -82,7 +82,7 @@ public class Controller {
         }, 1500);
     }
 
-    void display(Field field){
+    void display(Field field){ //如果一方全部阵亡 则结束 TODO
         if(field == null)
             return;
         for(int i = 0; i < field.sizeX; ++i) {
@@ -123,11 +123,15 @@ public class Controller {
                 @Override
                 public void run() {
                     fieldPane.setDisable(false);
+                    fieldPane.setVisible(true);
                     Mode = 2;
                     Step = 0;
-                    historyFilename = file.getName();
+                    historyFilename = file.getPath();
                     field = new Field();
-                    field.getHistoryField(historyFilename, Step++);
+                    if(field.getHistoryField(historyFilename, Step++) == false){
+                        //文件异常
+                        gameOver();
+                    };
                     display(field);
                 }
             }, 1500);
@@ -153,7 +157,9 @@ public class Controller {
     void gameOver(){
         Mode = 0;
         field = null;
+        historyFilename = "";
         fieldPane.setVisible(false);
+        display(new Field());
         fieldPane.setDisable(true);
         new Animation().fade_out_in(backgroundImageView, new Image(this.getClass().getResourceAsStream("/Background.png")));
         Timer timer = new Timer();
@@ -186,8 +192,11 @@ public class Controller {
         else if(Mode == 2){
             if(keyEvent.getCode() == KeyCode.ESCAPE)
                 gameOver();
-            else if(keyEvent.getCode() == KeyCode.SPACE)
-                field.getHistoryField(historyFilename, Step++);
+            else if(keyEvent.getCode() == KeyCode.SPACE) {
+                if(field.getHistoryField(historyFilename, Step++) == false) //文件异常
+                    gameOver();
+                display(field);
+            }
         }
     }
 }
