@@ -3,7 +3,6 @@ import Field.*;
 import javafx.scene.image.Image;
 
 public class Snake extends Monster {
-    private Position position;
 
     @Override
     public Image report(){

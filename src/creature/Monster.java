@@ -5,8 +5,6 @@ import javafx.scene.image.Image;
 public class Monster implements Creature{
     private Position position;
 
-
-
     @Override
     public Image report(){
         return null;
