@@ -68,7 +68,18 @@ public class Field {
         new HeyiStratagem().generate(8,0,badGuys,this);
     }
 
-    public Boolean getHistoryField(String filename, int step) { //读取文件加载历史
+    public void CleanField(){
+        //清空战场
+        for(int i = 0; i < sizeX; ++i) {
+            for (int j = 0; j < sizeY; ++j) {
+                this.creatures[i][j] = new Space();
+                this.positions[i][j] = new Position(i, j);
+                this.creatures[i][j].setPosition(this.positions[i][j]);
+            }
+        }
+    }
+
+    public boolean getHistoryField(String filename, int step) { //读取文件加载历史
         Reader reader;
         try{
             reader = new FileReader(filename);
@@ -86,14 +97,7 @@ public class Field {
         Boolean start = false;
         int cnt = -1; //第一个符号不计
 
-        //清空战场
-        for(int i = 0; i < sizeX; ++i) {
-            for (int j = 0; j < sizeY; ++j) {
-                this.creatures[i][j] = new Space();
-                this.positions[i][j] = new Position(i, j);
-                this.creatures[i][j].setPosition(this.positions[i][j]);
-            }
-        }
+        CleanField();
 
         while(true){
             try {
@@ -139,12 +143,51 @@ public class Field {
     }
 
     public void move(){ //移动
-        for(int j = 0; j < this.sizeY; ++j){
-            if(creatures[0][j].getSide() == 1){
-                Creature creature = creatures[0][j];
-                Delete(0,j);
-                Add(1,j,creature);
+        for(int i = 0; i < this.sizeX; ++i) {
+            for(int j = 0; j < this.sizeY; ++j){
+                if(creatures[i][j].getSide() == -1 && creatures[i][j].isDead() == false){
+                    creatures[i][j].setDead(true);
+                    return;
+                }
             }
         }
+    }
+
+    public int isGameOver(){
+        boolean goodGuyAlive = false;
+        boolean badGuyAlive = false;
+        for(int i = 0; i < this.sizeX; ++i) {
+            for(int j = 0; j < this.sizeY; ++j) {
+                if(creatures[i][j].isDead() == false) {
+                    if (creatures[i][j].getSide() == 1)
+                        goodGuyAlive = true;
+                    else if(creatures[i][j].getSide() == -1)
+                        badGuyAlive = true;
+                }
+            }
+        }
+        if(goodGuyAlive && badGuyAlive)
+            return 0;
+        else if(goodGuyAlive) {//好人胜利
+            CleanField();
+            for (int i = 0; i < 7; i++) {
+                this.Add(2+i, 4, new Huluwa(Huluwa.COLOR.values()[i], Huluwa.SENIORITY.values()[i]));
+            }
+            this.Add(9,4,new Grandpa());
+            return 1;
+        }
+        else if(badGuyAlive){//坏人胜利
+            CleanField();
+            for (int i = 0; i < 2; i++) {
+                this.Add(2+i, 4, new Xiaolouluo());
+            }
+            this.Add(4,4,new Xiezijing());
+            this.Add(5,4,new Snake());
+            for (int i = 0; i < 2; i++) {
+                this.Add(6+i, 4, new Xiaolouluo());
+            }
+            return -1;
+        }
+        else return 0;
     }
 }

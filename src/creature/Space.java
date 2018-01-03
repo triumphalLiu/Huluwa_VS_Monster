@@ -26,4 +26,15 @@ public class Space implements Creature {
     public int getSide(){
         return 0;
     }
+
+    @Override
+    public Boolean isDead() {
+        return true;
+    }
+
+    @Override
+    public void setDead(Boolean dead) {}
+
+    @Override
+    public void run(){}
 }

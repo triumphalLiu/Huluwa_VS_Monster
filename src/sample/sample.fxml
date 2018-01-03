@@ -12,6 +12,13 @@
             <Image url="@../Background.png" />
          </image>
       </ImageView>
+      <ImageView fx:id="titleImageView" fitHeight="300.0" fitWidth="800.0" layoutX="270.0" pickOnBounds="true" preserveRatio="true" visible="true">
+         <image>
+            <Image url="@../title.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="winnerImageView" fitHeight="200.0" fitWidth="800.0" layoutX="100.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="operationTipImageView" fitHeight="50.0" fitWidth="700.0" layoutX="300.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="startButton" fitHeight="55.0" fitWidth="500.0" layoutX="339.0" layoutY="282.0" onMouseClicked="#clickStartButton" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../startImage.png" />

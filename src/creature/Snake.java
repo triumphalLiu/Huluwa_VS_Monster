@@ -6,6 +6,9 @@ public class Snake extends Monster {
 
     @Override
     public Image report(){
-        return new Image(this.getClass().getResourceAsStream("/Snake.png"));
+        if(!isDead())
+            return new Image(this.getClass().getResourceAsStream("/Snake.png"));
+        else
+            return new Image(this.getClass().getResourceAsStream("/SnakeDead.png"));
     }
 }

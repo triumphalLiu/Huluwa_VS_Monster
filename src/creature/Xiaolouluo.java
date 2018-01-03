@@ -6,6 +6,9 @@ public class Xiaolouluo extends Monster {
 
    @Override
     public Image report(){
-        return new Image(this.getClass().getResourceAsStream("/LittleMonster.png"));
+       if(!isDead())
+            return new Image(this.getClass().getResourceAsStream("/LittleMonster.png"));
+       else
+           return new Image(this.getClass().getResourceAsStream("/LittleMonsterDead.png"));
     }
 }

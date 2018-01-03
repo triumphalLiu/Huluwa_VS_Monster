@@ -6,6 +6,9 @@ public class Xiezijing extends Monster {
 
     @Override
     public Image report(){
-        return new Image(this.getClass().getResourceAsStream("/Xiezijing.png"));
+        if(!isDead())
+            return new Image(this.getClass().getResourceAsStream("/Xiezijing.png"));
+        else
+            return new Image(this.getClass().getResourceAsStream("/XiezijingDead.png"));
     }
 }
