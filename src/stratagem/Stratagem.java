@@ -1,7 +1,7 @@
 package stratagem;
 
 import creature.Creature;
-import Field.Field;
+import field.Field;
 import java.util.ArrayList;
 
 public interface Stratagem {

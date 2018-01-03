@@ -1,5 +1,5 @@
 package creature;
-import Field.*;
+import field.Position;
 import javafx.scene.image.Image;
 
 public class Grandpa implements Creature {

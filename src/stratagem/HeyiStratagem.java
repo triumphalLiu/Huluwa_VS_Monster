@@ -1,6 +1,6 @@
 package stratagem;
 
-import Field.Field;
+import field.Field;
 import creature.Creature;
 import creature.Space;
 import java.util.ArrayList;

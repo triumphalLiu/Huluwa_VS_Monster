@@ -1,5 +1,4 @@
 package creature;
-import Field.Position;
 import javafx.scene.image.Image;
 
 public class Xiaolouluo extends Monster {

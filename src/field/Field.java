@@ -1,10 +1,8 @@
-package Field;
+package field;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import creature.*;
 import stratagem.ChangsheStratagem;
 import stratagem.HeyiStratagem;
-import stratagem.YanxingStratagem;
 
 import java.io.*;
 import java.util.ArrayList;

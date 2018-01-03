@@ -1,4 +1,4 @@
-package Field;
+package field;
 
 import creature.*;
 public class Position {

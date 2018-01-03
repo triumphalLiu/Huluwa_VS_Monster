@@ -2,7 +2,7 @@ package stratagem;
 
 import creature.Creature;
 import creature.Space;
-import Field.*;
+import field.Field;
 
 import java.util.ArrayList;
 
