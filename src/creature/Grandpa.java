@@ -8,10 +8,14 @@ public class Grandpa implements Creature {
     private Boolean isDead;
     private Field field;
     private Thread thread = null;
+    private Image image;
+    private Image imageDied;
 
     public Grandpa(Field f){
         field = f;
         isDead = false;
+        image = new Image(this.getClass().getResourceAsStream("/Grandpa.png"));
+        imageDied = new Image(this.getClass().getResourceAsStream("/GrandpaDead.png"));
     }
 
     @Override
@@ -37,9 +41,9 @@ public class Grandpa implements Creature {
     @Override
     public Image report(){
         if(!isDead())
-            return new Image(this.getClass().getResourceAsStream("/Grandpa.png"));
+            return image;
         else
-            return new Image(this.getClass().getResourceAsStream("/GrandpaDead.png"));
+            return imageDied;
     }
 
     @Override
@@ -61,7 +65,7 @@ public class Grandpa implements Creature {
     @Override
     public void run() {
         while (field.getRunAllThread()) {
-            System.out.println("Grandpa Move");
+            //System.out.println("Grandpa Move");
             //找到最近的一个对手
             int len = 9999;
             int x = -1;
@@ -116,11 +120,12 @@ public class Grandpa implements Creature {
                 }
             }
             if(this.isDead()){
+                System.out.println("Grandpa Die");
                 thread.interrupt();
                 break;
             }
             try {
-                Thread.sleep((int) (Math.random() * 1000) + 1500);
+                Thread.sleep((int) (Math.random() * 1000) + 2000);
             } catch (Exception e) {
 
             }

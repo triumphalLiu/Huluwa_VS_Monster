@@ -5,10 +5,15 @@ import javafx.scene.image.Image;
 
 public class Space implements Creature {
     private Position position;
+    private Image image;
+
+    public Space(){
+        image = new Image(this.getClass().getResourceAsStream("/Empty.png"));
+    }
 
     @Override
     public Image report() {
-        return new Image(this.getClass().getResourceAsStream("/Empty.png"));
+        return image;
     }
 
     @Override

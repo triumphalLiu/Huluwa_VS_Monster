@@ -8,6 +8,8 @@ public class Monster implements Creature{
     private Boolean isDead;
     private Field field;
     private Thread thread = null;
+    protected Image image = null;
+    protected Image imageDied = null;
 
     public Monster(Field f){
         isDead = false;
@@ -58,7 +60,7 @@ public class Monster implements Creature{
     @Override
     public void run() {
         while (field.getRunAllThread()) {
-            System.out.println("Monster " + getClass().getSimpleName() + " Move");
+            //System.out.println("Monster " + getClass().getSimpleName() + " Move");
             //找到最近的一个对手
             int len = 9999;
             int x = -1;
@@ -113,11 +115,12 @@ public class Monster implements Creature{
                 }
             }
             if(this.isDead()){
+                System.out.println("Monster " + this.getClass().getSimpleName() + " Died");
                 thread.interrupt();
                 break;
             }
             try {
-                Thread.sleep((int) (Math.random() * 1000) + 1500);
+                Thread.sleep((int) (Math.random() * 1000) + 2000);
             } catch (Exception e) {
 
             }

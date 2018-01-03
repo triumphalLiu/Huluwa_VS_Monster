@@ -145,7 +145,6 @@ public class Field {
                 else{
                     int posx = cnt / 8;
                     int posy = cnt % 8;
-                    System.out.print(c);
                     switch (c){
                         case 'I':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[0], Huluwa.SENIORITY.values()[0], this));creatures[posx][posy].setDead(true);break;
                         case 'O':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[1], Huluwa.SENIORITY.values()[1], this));creatures[posx][posy].setDead(true);break;

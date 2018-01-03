@@ -19,12 +19,46 @@ public class Huluwa implements Creature {
     private Boolean isDead;
     private Field field;
     private Thread thread = null;
+    private Image image = null;
+    private Image imageDied = null;
 
     public Huluwa(COLOR color, SENIORITY seiority, Field f) {
         field = f;
         isDead = false;
         this.color = color;
         this.seniority = seiority;
+        switch (this.seniority){
+            case 一:
+                image = new Image(this.getClass().getResourceAsStream("/Red.png"));
+                imageDied = new Image(this.getClass().getResourceAsStream("/RedDead.png"));
+                break;
+            case 二:
+                image = new Image(this.getClass().getResourceAsStream("/Orange.png"));
+                imageDied = new Image(this.getClass().getResourceAsStream("/OrangeDead.png"));
+                break;
+            case 三:
+                image = new Image(this.getClass().getResourceAsStream("/Yellow.png"));
+                imageDied = new Image(this.getClass().getResourceAsStream("/YellowDead.png"));
+                break;
+            case 四:
+                image = new Image(this.getClass().getResourceAsStream("/Green.png"));
+                imageDied = new Image(this.getClass().getResourceAsStream("/GreenDead.png"));
+                break;
+            case 五:
+                image = new Image(this.getClass().getResourceAsStream("/Cyan.png"));
+                imageDied = new Image(this.getClass().getResourceAsStream("/CyanDead.png"));
+                break;
+            case 六:
+                image = new Image(this.getClass().getResourceAsStream("/Blue.png"));
+                imageDied = new Image(this.getClass().getResourceAsStream("/BlueDead.png"));
+                break;
+            case 七:
+                image = new Image(this.getClass().getResourceAsStream("/Purple.png"));
+                imageDied = new Image(this.getClass().getResourceAsStream("/PurpleDead.png"));
+                break;
+            default://error
+                break;
+        }
     }
 
     @Override
@@ -40,19 +74,19 @@ public class Huluwa implements Creature {
     public char getNum(){
         switch (this.seniority){
             case 一:
-                return (!isDead)?'Q':'I';
+                return (!isDead())?'Q':'I';
             case 二:
-                return (!isDead)?'W':'O';
+                return (!isDead())?'W':'O';
             case 三:
-                return (!isDead)?'E':'P';
+                return (!isDead())?'E':'P';
             case 四:
-                return (!isDead)?'R':'A';
+                return (!isDead())?'R':'A';
             case 五:
-                return (!isDead)?'T':'S';
+                return (!isDead())?'T':'S';
             case 六:
-                return (!isDead)?'Y':'D';
+                return (!isDead())?'Y':'D';
             case 七:
-                return (!isDead)?'U':'F';
+                return (!isDead())?'U':'F';
             default://e
                 return '_';
         }
@@ -94,53 +128,16 @@ public class Huluwa implements Creature {
 
     @Override
     public Image report() {
-        if(!isDead()) {
-            switch (this.seniority) {
-                case 一:
-                    return new Image(this.getClass().getResourceAsStream("/Red.png"));
-                case 二:
-                    return new Image(this.getClass().getResourceAsStream("/Orange.png"));
-                case 三:
-                    return new Image(this.getClass().getResourceAsStream("/Yellow.png"));
-                case 四:
-                    return new Image(this.getClass().getResourceAsStream("/Green.png"));
-                case 五:
-                    return new Image(this.getClass().getResourceAsStream("/Cyan.png"));
-                case 六:
-                    return new Image(this.getClass().getResourceAsStream("/Blue.png"));
-                case 七:
-                    return new Image(this.getClass().getResourceAsStream("/Purple.png"));
-                default://error
-                    break;
-            }
-        }
-        else{
-            switch (this.seniority) {
-                case 一:
-                    return new Image(this.getClass().getResourceAsStream("/RedDead.png"));
-                case 二:
-                    return new Image(this.getClass().getResourceAsStream("/OrangeDead.png"));
-                case 三:
-                    return new Image(this.getClass().getResourceAsStream("/YellowDead.png"));
-                case 四:
-                    return new Image(this.getClass().getResourceAsStream("/GreenDead.png"));
-                case 五:
-                    return new Image(this.getClass().getResourceAsStream("/CyanDead.png"));
-                case 六:
-                    return new Image(this.getClass().getResourceAsStream("/BlueDead.png"));
-                case 七:
-                    return new Image(this.getClass().getResourceAsStream("/PurpleDead.png"));
-                default://error
-                    break;
-            }
-        }
-        return null;
+        if(!isDead())
+            return image;
+        else
+            return imageDied;
     }
 
     @Override
     public void run(){
         while (field.getRunAllThread()) {
-            System.out.println("Huluwa " + color + " Move");
+            //System.out.println("Huluwa " + color + " Move");
             //找到最近的一个对手
             int len = 9999;
             int x = -1;
@@ -195,11 +192,12 @@ public class Huluwa implements Creature {
                 }
             }
             if(this.isDead()){
+                System.out.println("Huluwa " + getPosition() + " Died");
                 thread.interrupt();
                 break;
             }
             try {
-                Thread.sleep((int) (Math.random() * 1000) + 1500);
+                Thread.sleep((int) (Math.random() * 1000) + 2000);
             } catch (Exception e) {
 
             }

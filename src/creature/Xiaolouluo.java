@@ -6,13 +6,15 @@ public class Xiaolouluo extends Monster {
 
     public Xiaolouluo(Field f){
         super(f);
+        image = new Image(this.getClass().getResourceAsStream("/LittleMonster.png"));
+        imageDied = new Image(this.getClass().getResourceAsStream("/LittleMonsterDead.png"));
     }
 
    @Override
     public Image report(){
        if(!isDead())
-            return new Image(this.getClass().getResourceAsStream("/LittleMonster.png"));
+            return image;
        else
-           return new Image(this.getClass().getResourceAsStream("/LittleMonsterDead.png"));
+            return imageDied;
     }
 }
