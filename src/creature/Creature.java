@@ -4,10 +4,12 @@ import field.Position;
 import javafx.scene.image.Image;
 
 public interface Creature extends Runnable{
-    public Image report();
-    public void setPosition(Position position);
-    public Position getPosition();
-    public int getSide();
-    public Boolean isDead();
-    public void setDead(Boolean dead);
+    Image report();
+    void setPosition(Position position);
+    Position getPosition();
+    int getSide();
+    Boolean isDead();
+    void setDead(Boolean dead);
+    Thread getThread();
+    void setThread(Thread t);
 }

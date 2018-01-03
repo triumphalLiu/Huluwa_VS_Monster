@@ -36,5 +36,13 @@ public class Space implements Creature {
     public void setDead(Boolean dead) {}
 
     @Override
+    public Thread getThread() {
+        return null;
+    }
+
+    @Override
+    public void setThread(Thread t) {}
+
+    @Override
     public void run(){}
 }

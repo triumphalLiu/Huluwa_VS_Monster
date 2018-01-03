@@ -1,8 +1,13 @@
 package creature;
 
+import field.Field;
 import javafx.scene.image.Image;
 
 public class Snake extends Monster {
+
+    public Snake(Field f){
+        super(f);
+    }
 
     @Override
     public Image report(){

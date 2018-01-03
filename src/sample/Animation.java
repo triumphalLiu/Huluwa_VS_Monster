@@ -6,6 +6,7 @@ import javafx.scene.image.ImageView;
 import java.util.Timer;
 import java.util.TimerTask;
 
+//动画效果
 public class Animation {
     public void fade_out_in(ImageView img, Image nextImg){
         //设置定时器 每100ms降低0.2可见度

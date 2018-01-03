@@ -8,12 +8,16 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class Field {
-    public int sizeX = 12;
-    public int sizeY = 8;
+    final public int sizeX = 12;
+    final public int sizeY = 8;
     private Position[][] positions;
     private Creature[][] creatures;
+    private String fieldDocument; //保存到文件
+    private boolean runAllThread; //线程控制
 
     public Field() {    //创建出二维空间放置生物
+        fieldDocument = "";
+        runAllThread = true;
         this.positions = new Position[sizeX][sizeY];
         this.creatures = new Creature[sizeX][sizeY];
         for(int i = 0; i < sizeX; ++i) {
@@ -25,49 +29,80 @@ public class Field {
         }
     }
 
-    public Position[] getPositions(int i) {
-        return positions[i];
+    //添加creature
+    public <Template extends Creature> void Add(int x, int y, Template creature){
+        this.creatures[x][y] = creature;
+        this.positions[x][y].setHolder(creature);
+        creature.setPosition(this.positions[x][y]);
+    }
+
+    //删除creature
+    public <Template extends Creature> void Delete(int x, int y){
+        Creature p = new Space();
+        this.creatures[x][y] = p;
+        this.positions[x][y].setHolder(p);
+        p.setPosition(this.positions[x][y]);
+    }
+
+    public Position[][] getPositions() {
+        return positions;
     }
 
     public Creature[][] getCreatures() {
         return creatures;
     }
 
-    public <Template extends Creature> void Add(int x, int y, Template creature){
-        this.creatures[x][y] = creature;
-        this.positions[x][y].setHolder(creature);
+    public void setFieldDocument(String str){
+        fieldDocument = str;
     }
 
-    public <Template extends Creature> void Delete(int x, int y){
-        Creature p = new Space();
-        this.creatures[x][y] = p;
-        this.positions[x][y].setHolder(p);
+    public String getFieldDocument(){
+        return fieldDocument;
     }
 
-    public void getReady(){ //准备战斗
+    public void setRunAllThread(boolean b){
+        runAllThread = b;
+    }
+
+    public boolean getRunAllThread(){
+        return runAllThread;
+    }
+
+    //同一行是否有敌人
+    public boolean isRowHaveEnemy(Creature creature){
+        int row = creature.getPosition().getY();
+        for(int i = 0; i < sizeX; ++i){
+            if(creatures[i][row].getSide() == -creature.getSide() && creatures[i][row].isDead() == false)
+                return true;
+        }
+        return false;
+    }
+
+    //准备战斗 摆好阵形
+    public void getReady(){
         ArrayList<Creature> goodGuys = new ArrayList<Creature>();
         ArrayList<Huluwa> brothers = new ArrayList<Huluwa>();
         for (int i = 0; i < 7; i++) {
-            brothers.add(new Huluwa(Huluwa.COLOR.values()[i], Huluwa.SENIORITY.values()[i]));
+            brothers.add(new Huluwa(Huluwa.COLOR.values()[i], Huluwa.SENIORITY.values()[i], this));
         }
         goodGuys.addAll(brothers);
-        goodGuys.add(new Grandpa());
+        goodGuys.add(new Grandpa(this));
         new ChangsheStratagem().generate(0,0,goodGuys,this);
 
         ArrayList<Monster> badGuys = new ArrayList<Monster>();
-        badGuys.add(new Xiaolouluo());
-        badGuys.add(new Xiaolouluo());
-        badGuys.add(new Xiaolouluo());
-        badGuys.add(new Xiezijing());
-        badGuys.add(new Snake());
-        badGuys.add(new Xiaolouluo());
-        badGuys.add(new Xiaolouluo());
-        badGuys.add(new Xiaolouluo());
+        badGuys.add(new Xiaolouluo(this));
+        badGuys.add(new Xiaolouluo(this));
+        badGuys.add(new Xiaolouluo(this));
+        badGuys.add(new Xiezijing(this));
+        badGuys.add(new Snake(this));
+        badGuys.add(new Xiaolouluo(this));
+        badGuys.add(new Xiaolouluo(this));
+        badGuys.add(new Xiaolouluo(this));
         new HeyiStratagem().generate(8,0,badGuys,this);
     }
 
+    //清空战场
     public void CleanField(){
-        //清空战场
         for(int i = 0; i < sizeX; ++i) {
             for (int j = 0; j < sizeY; ++j) {
                 this.creatures[i][j] = new Space();
@@ -77,7 +112,8 @@ public class Field {
         }
     }
 
-    public boolean getHistoryField(String filename, int step) { //读取文件加载历史
+    //从文件读取历史战斗
+    public boolean getHistoryField(String filename, int step) {
         Reader reader;
         try{
             reader = new FileReader(filename);
@@ -107,21 +143,32 @@ public class Field {
                 else if(c == '#' && start == true)
                     break;
                 else{
-                    int posx = cnt % 12;
-                    int posy = cnt / 12;
+                    int posx = cnt / 8;
+                    int posy = cnt % 8;
                     System.out.print(c);
                     switch (c){
-                        case '1':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[0], Huluwa.SENIORITY.values()[0]));break;
-                        case '2':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[1], Huluwa.SENIORITY.values()[1]));break;
-                        case '3':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[2], Huluwa.SENIORITY.values()[2]));break;
-                        case '4':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[3], Huluwa.SENIORITY.values()[3]));break;
-                        case '5':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[4], Huluwa.SENIORITY.values()[4]));break;
-                        case '6':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[5], Huluwa.SENIORITY.values()[5]));break;
-                        case '7':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[6], Huluwa.SENIORITY.values()[6]));break;
-                        case 'g':Add(posx, posy, new Grandpa());break;
-                        case 's':Add(posx, posy, new Snake());break;
-                        case 'l':Add(posx, posy, new Xiaolouluo());break;
-                        case 'x':Add(posx, posy, new Xiezijing());break;
+                        case 'I':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[0], Huluwa.SENIORITY.values()[0], this));creatures[posx][posy].setDead(true);break;
+                        case 'O':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[1], Huluwa.SENIORITY.values()[1], this));creatures[posx][posy].setDead(true);break;
+                        case 'P':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[2], Huluwa.SENIORITY.values()[2], this));creatures[posx][posy].setDead(true);break;
+                        case 'A':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[3], Huluwa.SENIORITY.values()[3], this));creatures[posx][posy].setDead(true);break;
+                        case 'S':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[4], Huluwa.SENIORITY.values()[4], this));creatures[posx][posy].setDead(true);break;
+                        case 'D':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[5], Huluwa.SENIORITY.values()[5], this));creatures[posx][posy].setDead(true);break;
+                        case 'F':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[6], Huluwa.SENIORITY.values()[6], this));creatures[posx][posy].setDead(true);break;
+                        case 'H':Add(posx, posy, new Grandpa(this));creatures[posx][posy].setDead(true);break;
+                        case 'J':Add(posx, posy, new Snake(this));creatures[posx][posy].setDead(true);break;
+                        case 'L':Add(posx, posy, new Xiaolouluo(this));creatures[posx][posy].setDead(true);break;
+                        case 'X':Add(posx, posy, new Xiezijing(this));creatures[posx][posy].setDead(true);break;
+                        case 'Q':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[0], Huluwa.SENIORITY.values()[0], this));creatures[posx][posy].setDead(false);break;
+                        case 'W':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[1], Huluwa.SENIORITY.values()[1], this));creatures[posx][posy].setDead(false);break;
+                        case 'E':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[2], Huluwa.SENIORITY.values()[2], this));creatures[posx][posy].setDead(false);break;
+                        case 'R':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[3], Huluwa.SENIORITY.values()[3], this));creatures[posx][posy].setDead(false);break;
+                        case 'T':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[4], Huluwa.SENIORITY.values()[4], this));creatures[posx][posy].setDead(false);break;
+                        case 'Y':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[5], Huluwa.SENIORITY.values()[5], this));creatures[posx][posy].setDead(false);break;
+                        case 'U':Add(posx, posy, new Huluwa(Huluwa.COLOR.values()[6], Huluwa.SENIORITY.values()[6], this));creatures[posx][posy].setDead(false);break;
+                        case 'G':Add(posx, posy, new Grandpa(this));creatures[posx][posy].setDead(false);break;
+                        case 'K':Add(posx, posy, new Snake(this));creatures[posx][posy].setDead(false);break;
+                        case 'Z':Add(posx, posy, new Xiaolouluo(this));creatures[posx][posy].setDead(false);break;
+                        case 'C':Add(posx, posy, new Xiezijing(this));creatures[posx][posy].setDead(false);break;
                         default:break;
                     }
                 }
@@ -140,17 +187,42 @@ public class Field {
         return true;
     }
 
-    public void move(){ //移动
+    //创建线程并启动
+    public void startRun() {
         for(int i = 0; i < this.sizeX; ++i) {
-            for(int j = 0; j < this.sizeY; ++j){
-                if(creatures[i][j].getSide() == -1 && creatures[i][j].isDead() == false){
-                    creatures[i][j].setDead(true);
-                    return;
+            for (int j = 0; j < this.sizeY; ++j) {
+                if (!creatures[i][j].getClass().getSimpleName().equals("Space") && creatures[i][j].isDead() == false) {
+                    Creature creature = creatures[i][j];
+                    Thread current = new Thread(creature);
+                    creature.setThread(current);
+                    current.start();
                 }
             }
         }
     }
 
+    //保存当前的情况到字符串
+    public void saveCurrentField(){
+        fieldDocument += '#';
+        for(int i = 0; i < sizeX; ++i) {
+            for (int j = 0; j < sizeY; ++j) {
+                String kind = creatures[i][j].getClass().getSimpleName();
+                switch (kind){
+                    case "Space":fieldDocument += '_'; continue;
+                    case "Grandpa":fieldDocument += (creatures[i][j].isDead())?'H':'G';continue;
+                    case "Huluwa":fieldDocument += ((Huluwa)creatures[i][j]).getNum();continue;
+                    case "Snake":fieldDocument += (creatures[i][j].isDead())?'J':'K';continue;
+                    case "Xiaolouluo":fieldDocument += (creatures[i][j].isDead())?'L':'Z';continue;
+                    case "Xiezijing":fieldDocument += (creatures[i][j].isDead())?'X':'C';continue;
+                    default:fieldDocument+='_';continue;
+                }
+            }
+        }
+        fieldDocument += '#';
+        fieldDocument += '\n';
+    }
+
+    //游戏是否结束
     public int isGameOver(){
         boolean goodGuyAlive = false;
         boolean badGuyAlive = false;
@@ -166,26 +238,28 @@ public class Field {
         }
         if(goodGuyAlive && badGuyAlive)
             return 0;
-        else if(goodGuyAlive) {//好人胜利
+        else if(goodGuyAlive) {//好人胜利 清空进程 摆造型
             CleanField();
+            setRunAllThread(false);
             for (int i = 0; i < 7; i++) {
-                this.Add(2+i, 4, new Huluwa(Huluwa.COLOR.values()[i], Huluwa.SENIORITY.values()[i]));
+                this.Add(2+i, 4, new Huluwa(Huluwa.COLOR.values()[i], Huluwa.SENIORITY.values()[i], this));
             }
-            this.Add(9,4,new Grandpa());
+            this.Add(9,4,new Grandpa(this));
             return 1;
         }
-        else if(badGuyAlive){//坏人胜利
+        else if(badGuyAlive){//坏人胜利 清空进程 摆造型
             CleanField();
-            for (int i = 0; i < 2; i++) {
-                this.Add(2+i, 4, new Xiaolouluo());
+            setRunAllThread(false);
+            for (int i = 0; i < 3; i++) {
+                this.Add(2+i, 4, new Xiaolouluo(this));
             }
-            this.Add(4,4,new Xiezijing());
-            this.Add(5,4,new Snake());
-            for (int i = 0; i < 2; i++) {
-                this.Add(6+i, 4, new Xiaolouluo());
+            this.Add(5,4,new Xiezijing(this));
+            this.Add(6,4,new Snake(this));
+            for (int i = 0; i < 3; i++) {
+                this.Add(7+i, 4, new Xiaolouluo(this));
             }
             return -1;
         }
-        else return 0;
+        else return 0x42;
     }
 }

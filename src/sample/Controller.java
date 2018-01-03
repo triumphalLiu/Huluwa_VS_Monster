@@ -13,12 +13,16 @@ import javafx.scene.layout.Pane;
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import java.io.File;
+import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class Controller {
     @FXML
     private GridPane fieldPane;
+
+    @FXML
+    private GridPane deathPane;
 
     @FXML
     private Pane mainPane;
@@ -48,17 +52,103 @@ public class Controller {
     private ImageView operationTipImageView;
 
     private Field field;
-    private int Mode; //0=not start 1= new game 2=history game
+    private int Mode; //0=not start 1= new game 2=history game 3=newgame finish 4=history finish
     private int Step; //history step
     private String historyFilename;
+    private boolean isRunning;
 
+    //初始化
     public void InitController(){
+        isRunning = false;
         Mode = 0;
         Step = 0;
         field = null;
         historyFilename = "";
         mainPane.setFocusTraversable(true);
         mainPane.requestFocus();
+    }
+
+    //清空DeathPane
+    private void cleanDeathPane(){
+        for(int i = 0; i < field.sizeX; ++i) {
+            for (int j = 0; j < field.sizeY; ++j) {
+                ImageView tmp = (ImageView) deathPane.getChildren().get(field.sizeX * j + i);
+                tmp.setImage(new Image(this.getClass().getResourceAsStream("/Empty.png")));
+            }
+        }
+    }
+
+    //清空FieldPane
+    private void cleanFieldPane(){
+        for(int i = 0; i < field.sizeX; ++i) {
+            for (int j = 0; j < field.sizeY; ++j) {
+                ImageView tmp = (ImageView) fieldPane.getChildren().get(field.sizeX * j + i);
+                tmp.setImage(new Image(this.getClass().getResourceAsStream("/Empty.png")));
+            }
+        }
+    }
+
+    //将战场情况显示到UI
+    private void display(Field field){ //如果一方全部阵亡 则结束
+        if(field == null)
+            return;
+        if(field.isGameOver() == 1) {
+            cleanDeathPane();
+            winnerImageView.setImage(new Image(this.getClass().getResourceAsStream("/GoodGuyWins.png")));
+            operationTipImageView.setImage(new Image(this.getClass().getResourceAsStream("/operationTip.png")));
+        }
+        else if(field.isGameOver() == -1) {
+            cleanDeathPane();
+            winnerImageView.setImage(new Image(this.getClass().getResourceAsStream("/BadGuyWins.png")));
+            operationTipImageView.setImage(new Image(this.getClass().getResourceAsStream("/operationTip.png")));
+        }
+        else {
+            winnerImageView.setImage(new Image(this.getClass().getResourceAsStream("/Empty.png")));
+            operationTipImageView.setImage(new Image(this.getClass().getResourceAsStream("/Empty.png")));
+        }
+        for(int i = 0; i < field.sizeX; ++i) {
+            for (int j = 0; j < field.sizeY; ++j) {
+                if(!field.getCreatures()[i][j].getClass().getSimpleName().equals("Space") && field.getCreatures()[i][j].isDead()){
+                    ImageView tmp = (ImageView) deathPane.getChildren().get(field.sizeX * j + i);
+                    tmp.setImage(field.getCreatures()[i][j].report());
+                    field.Delete(i,j);
+                }
+            }
+        }
+        for(int i = 0; i < field.sizeX; ++i) {
+            for (int j = 0; j < field.sizeY; ++j) {
+                ImageView tmp = (ImageView) fieldPane.getChildren().get(field.sizeX * j + i);
+                tmp.setImage(field.getCreatures()[i][j].report());
+            }
+        }
+    }
+
+    //游戏结束 对UI进行操作
+    public void gameOver(){
+        cleanDeathPane();
+        cleanFieldPane();
+        field.setRunAllThread(false);
+        InitController();
+        fieldPane.setVisible(false);
+        deathPane.setVisible(false);
+        fieldPane.setDisable(true);
+        deathPane.setDisable(true);
+        winnerImageView.setVisible(false);
+        operationTipImageView.setVisible(false);
+        winnerImageView.setImage(new Image(this.getClass().getResourceAsStream("/Empty.png")));
+        operationTipImageView.setImage(new Image(this.getClass().getResourceAsStream("/Empty.png")));
+        new Animation().fade_out_in(backgroundImageView, new Image(this.getClass().getResourceAsStream("/Background.png")));
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                startButton.setVisible(true);
+                historyButton.setVisible(true);
+                exitButton.setVisible(true);
+                aboutButton.setVisible(true);
+                titleImageView.setVisible(true);
+            }
+        }, 1500);
     }
 
     @FXML
@@ -78,37 +168,15 @@ public class Controller {
             public void run() {
                 fieldPane.setDisable(false);
                 fieldPane.setVisible(true);
+                deathPane.setDisable(false);
+                deathPane.setVisible(true);
                 Mode = 1;
-                //战斗 TODO
                 field = new Field();
                 field.getReady();
                 display(field);
                 this.cancel();
             }
         }, 1500);
-    }
-
-    private void display(Field field){ //如果一方全部阵亡 则结束 TODO
-        if(field == null)
-            return;
-        if(field.isGameOver() == 1) {
-            winnerImageView.setImage(new Image(this.getClass().getResourceAsStream("/GoodGuyWins.png")));
-            operationTipImageView.setImage(new Image(this.getClass().getResourceAsStream("/operationTip.png")));
-        }
-        else if(field.isGameOver() == -1) {
-            winnerImageView.setImage(new Image(this.getClass().getResourceAsStream("/BadGuyWins.png")));
-            operationTipImageView.setImage(new Image(this.getClass().getResourceAsStream("/operationTip.png")));
-        }
-        else {
-            winnerImageView.setImage(new Image(this.getClass().getResourceAsStream("/Empty.png")));
-            operationTipImageView.setImage(new Image(this.getClass().getResourceAsStream("/Empty.png")));
-        }
-        for(int i = 0; i < field.sizeX; ++i) {
-            for (int j = 0; j < field.sizeY; ++j) {
-                ImageView tmp = (ImageView) fieldPane.getChildren().get(field.sizeX*j+i);
-                tmp.setImage(field.getCreatures()[i][j].report());
-            }
-        }
     }
 
     @FXML
@@ -148,13 +216,12 @@ public class Controller {
                 public void run() {
                     fieldPane.setDisable(false);
                     fieldPane.setVisible(true);
+                    deathPane.setDisable(false);
+                    deathPane.setVisible(true);
                     Mode = 2;
                     Step = 0;
                     historyFilename = file.getPath();
-                    if(field.getHistoryField(historyFilename, Step++) == false){
-                        //文件异常
-                        gameOver();
-                    };
+                    field.getReady();
                     display(field);
                 }
             }, 1500);
@@ -177,69 +244,93 @@ public class Controller {
         System.exit(0);
     }
 
-    void gameOver(){
-        Mode = 0;
-        field = null;
-        historyFilename = "";
-        fieldPane.setVisible(false);
-        display(new Field());
-        fieldPane.setDisable(true);
-        new Animation().fade_out_in(backgroundImageView, new Image(this.getClass().getResourceAsStream("/Background.png")));
-        Timer timer = new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                startButton.setVisible(true);
-                historyButton.setVisible(true);
-                exitButton.setVisible(true);
-                aboutButton.setVisible(true);
-                titleImageView.setVisible(true);
-                winnerImageView.setVisible(false);
-                operationTipImageView.setVisible(false);
-            }
-        }, 1500);
-    }
-
     @FXML
     void pressKeyEventHandler(KeyEvent keyEvent){
         System.out.println(keyEvent.getCode());
-        if(Mode == 0){ //start Page
+        //开始界面
+        if(Mode == 0){
             if(keyEvent.getCode() == KeyCode.L)
                 clickHistoryButton(null);
         }
+        //新游戏界面
         else if(Mode == 1){ //new Game
             if(keyEvent.getCode() == KeyCode.ESCAPE)
                 gameOver();
             else if(keyEvent.getCode() == KeyCode.SPACE){
-                field.move();
-                checkGameOver();
+                if(!isRunning) {
+                    isRunning = true;
+                    field.startRun();
+                    Timer timerCheck = new Timer();
+                    timerCheck.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            int wins = field.isGameOver();
+                            if (wins != 0) {
+                                Mode = 3;
+                                isRunning = false;
+                                this.cancel();
+                            }
+                        }
+                    },500,500);
+                    Timer timer = new Timer();
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            field.saveCurrentField();
+                            display(field);
+                            if(Mode != 1)
+                                this.cancel();
+                        }
+                    }, 200, 200);
+                }
             }
         }
+        //读取历史界面
         else if(Mode == 2){//load History
             if(keyEvent.getCode() == KeyCode.ESCAPE)
                 gameOver();
             else if(keyEvent.getCode() == KeyCode.SPACE) {
                 if(field.getHistoryField(historyFilename, Step++) == false) //文件异常
                     gameOver();
-                checkGameOver();
+                int wins = field.isGameOver();
+                System.out.println(wins);
+                display(field);
+                if(wins != 0)
+                    Mode = 4;
             }
         }
-        else if(Mode == 3){//new Game end
+        //新游戏结束界面 & 读取历史结束界面
+        else if(Mode == 3 || Mode == 4){//new Game end
             if(keyEvent.getCode() == KeyCode.ESCAPE)
                 gameOver();
             else if(keyEvent.getCode() == KeyCode.L)
                 clickHistoryButton(null);
             else if(keyEvent.getCode() == KeyCode.SPACE)
                 gameOver();
-            //save...
+            //保存
+            else if(keyEvent.getCode() == KeyCode.S && Mode == 3) {
+                HLWFileFilter filter = new HLWFileFilter();
+                JFileChooser fc = new JFileChooser();
+                fc.setFileFilter(filter);
+                fc.setMultiSelectionEnabled(false);
+                int result = fc.showSaveDialog(null);
+                if (result == JFileChooser.APPROVE_OPTION) {
+                    File file = fc.getSelectedFile();
+                    if (!file.getPath().endsWith(".hlw")) {
+                        file = new File(file.getPath() + ".hlw");
+                    }
+                    System.out.println("file path = " + file.getAbsolutePath());
+                    try {
+                        if (!file.exists()) {
+                            file.createNewFile();
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    new FileModel().saveToFile(file.getAbsolutePath(), field.getFieldDocument());
+                }
+            }
         }
-    }
-
-    private void checkGameOver(){
-        int wins = field.isGameOver();
-        display(field);
-        if(wins != 0)
-            Mode = 3;
     }
 }
 

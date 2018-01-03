@@ -5,6 +5,5 @@ import field.Field;
 import java.util.ArrayList;
 
 public interface Stratagem {
-    public <Template extends Creature> void generate(int startRow, int startCol, ArrayList<Template> creatures, Field space);
-    public <Template extends Creature> void cancel(int startRow, int startCol, ArrayList<Template> creatures, Field space);
+    <Template extends Creature> void generate(int startRow, int startCol, ArrayList<Template> creatures, Field space);
 }
