@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/TestField.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/creature/Grandpa.java" afterPath="$PROJECT_DIR$/src/creature/Grandpa.java" />
+      <change beforePath="$PROJECT_DIR$/Huluwa_VS_Monster.iml" afterPath="$PROJECT_DIR$/Huluwa_VS_Monster.iml" />
       <change beforePath="$PROJECT_DIR$/src/creature/Huluwa.java" afterPath="$PROJECT_DIR$/src/creature/Huluwa.java" />
-      <change beforePath="$PROJECT_DIR$/src/creature/Monster.java" afterPath="$PROJECT_DIR$/src/creature/Monster.java" />
       <change beforePath="$PROJECT_DIR$/src/field/Field.java" afterPath="$PROJECT_DIR$/src/field/Field.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="$PROJECT_DIR$/src/sample/Controller.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,31 +67,29 @@
       <file leaf-file-name="Field.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/field/Field.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+            <state relative-caret-position="-59">
+              <caret line="81" column="33" lean-forward="false" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1534#1535#0" expanded="true" />
-                <element signature="e#1566#1567#0" expanded="true" />
-                <element signature="e#1605#1606#0" expanded="true" />
-                <element signature="e#1640#1641#0" expanded="true" />
-                <element signature="e#1682#1683#0" expanded="true" />
-                <element signature="e#1714#1715#0" expanded="true" />
-                <element signature="e#1756#1757#0" expanded="true" />
-                <element signature="e#1788#1789#0" expanded="true" />
-                <element signature="e#1835#1836#0" expanded="true" />
-                <element signature="e#1870#1871#0" expanded="true" />
-                <element signature="e#1909#1910#0" expanded="true" />
-                <element signature="e#1945#1946#0" expanded="true" />
-                <element signature="e#1990#1991#0" expanded="true" />
-                <element signature="e#2022#2023#0" expanded="true" />
-                <element signature="e#2061#2062#0" expanded="true" />
-                <element signature="e#2096#2097#0" expanded="true" />
+                <element signature="e#1496#1497#0" expanded="true" />
+                <element signature="e#1528#1529#0" expanded="true" />
+                <element signature="e#1567#1568#0" expanded="true" />
+                <element signature="e#1602#1603#0" expanded="true" />
+                <element signature="e#1644#1645#0" expanded="true" />
+                <element signature="e#1676#1677#0" expanded="true" />
+                <element signature="e#1718#1719#0" expanded="true" />
+                <element signature="e#1750#1751#0" expanded="true" />
+                <element signature="e#1797#1798#0" expanded="true" />
+                <element signature="e#1832#1833#0" expanded="true" />
+                <element signature="e#1871#1872#0" expanded="true" />
+                <element signature="e#1907#1908#0" expanded="true" />
+                <element signature="e#1952#1953#0" expanded="true" />
+                <element signature="e#1984#1985#0" expanded="true" />
+                <element signature="e#2023#2024#0" expanded="true" />
+                <element signature="e#2058#2059#0" expanded="true" />
                 <element signature="method#isRowHaveEnemy#0;class#Field#0" expanded="false" />
                 <element signature="method#getReady#0;class#Field#0" expanded="false" />
-                <element signature="method#CleanField#0;class#Field#0" expanded="false" />
                 <element signature="method#startRun#0;class#Field#0" expanded="false" />
-                <element signature="method#isGameOver#0;class#Field#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -102,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/src/field/Position.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+              <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -118,16 +115,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1772">
-              <caret line="327" column="29" lean-forward="false" selection-start-line="327" selection-start-column="29" selection-end-line="327" selection-end-column="29" />
+            <state relative-caret-position="2506">
+              <caret line="173" column="29" lean-forward="false" selection-start-line="173" selection-start-column="29" selection-end-line="173" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5004#5333#0" expanded="true" />
                 <element signature="e#5332#5333#0" expanded="true" />
-                <element signature="method#clickStartButton#0;class#Controller#0" expanded="false" />
                 <element signature="e#5899#6374#0" expanded="true" />
                 <element signature="e#6373#6374#0" expanded="true" />
                 <element signature="method#clickHistoryButton#0;class#Controller#0" expanded="false" />
@@ -142,22 +138,6 @@
                 <element signature="e#11454#11455#0" expanded="true" />
                 <element signature="e#13032#13033#0" expanded="true" />
                 <element signature="e#13063#13064#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Space.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/creature/Space.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#192#193#0" expanded="true" />
-                <element signature="e#276#277#0" expanded="true" />
-                <element signature="e#319#320#0" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -209,20 +189,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Snake.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/creature/Snake.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="10" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Xiaolouluo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/creature/Xiaolouluo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
+            <state relative-caret-position="133">
               <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="9" selection-end-column="93" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -234,14 +204,39 @@
       <file leaf-file-name="Huluwa.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/creature/Huluwa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="139" column="14" lean-forward="false" selection-start-line="139" selection-start-column="14" selection-end-line="139" selection-end-column="14" />
+            <state relative-caret-position="3019">
+              <caret line="194" column="61" lean-forward="false" selection-start-line="194" selection-start-column="61" selection-end-line="194" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2377#2378#0" expanded="true" />
                 <element signature="e#2406#2407#0" expanded="true" />
                 <element signature="e#2458#2459#0" expanded="true" />
                 <element signature="e#2484#2485#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestField.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/TestField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="779">
+              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+              <folding>
+                <element signature="e#1211#1212#0" expanded="true" />
+                <element signature="e#1239#1240#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -317,11 +312,12 @@
         <option value="$PROJECT_DIR$/src/creature/Space.java" />
         <option value="$PROJECT_DIR$/src/creature/Xiaolouluo.java" />
         <option value="$PROJECT_DIR$/src/creature/Xiezijing.java" />
-        <option value="$PROJECT_DIR$/src/field/Field.java" />
-        <option value="$PROJECT_DIR$/src/creature/Huluwa.java" />
         <option value="$PROJECT_DIR$/src/creature/Monster.java" />
         <option value="$PROJECT_DIR$/src/creature/Grandpa.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/creature/Huluwa.java" />
+        <option value="$PROJECT_DIR$/src/field/Field.java" />
+        <option value="$PROJECT_DIR$/test/TestField.java" />
       </list>
     </option>
   </component>
@@ -370,32 +366,12 @@
               <item name="Huluwa_VS_Monster" type="b2602c69:ProjectViewProjectNode" />
               <item name="Huluwa_VS_Monster" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="creature" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Huluwa_VS_Monster" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Huluwa_VS_Monster" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="field" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Huluwa_VS_Monster" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Huluwa_VS_Monster" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Huluwa_VS_Monster" type="b2602c69:ProjectViewProjectNode" />
               <item name="Huluwa_VS_Monster" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="Huluwa_VS_Monster" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Huluwa_VS_Monster" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="stratagem" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -444,7 +420,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.TestField">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module />
       <option name="HTML_USED" value="false" />
@@ -506,6 +482,66 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+    </configuration>
+    <configuration name="TestField" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Huluwa_VS_Monster" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestField" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="TestField.testAddCreature" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Huluwa_VS_Monster" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestField" />
+      <option name="METHOD_NAME" value="testAddCreature" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="TestField.testIsGameOver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Huluwa_VS_Monster" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestField" />
+      <option name="METHOD_NAME" value="testIsGameOver" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -579,13 +615,19 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
-    <list size="2">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
       <item index="1" class="java.lang.String" itemvalue="Application.Main (1)" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestField" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestField.testAddCreature" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestField.testIsGameOver" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main (1)" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestField" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestField.testIsGameOver" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestField.testAddCreature" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -605,6 +647,38 @@
       <workItem from="1359379250712" duration="1302000" />
     </task>
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TestField - 2018.01.04 at 12h 16m 28s.xml">
+      <configuration name="TestField" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestField - 2018.01.04 at 12h 19m 01s.xml">
+      <configuration name="TestField" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestField - 2018.01.04 at 12h 26m 41s.xml">
+      <configuration name="TestField" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestField_testAddCreature - 2018.01.04 at 12h 14m 56s.xml">
+      <configuration name="TestField.testAddCreature" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestField_testAddCreature - 2018.01.04 at 12h 15m 02s.xml">
+      <configuration name="TestField.testAddCreature" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestField_testAddCreature - 2018.01.04 at 12h 15m 20s.xml">
+      <configuration name="TestField.testAddCreature" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestField_testIsGameOver - 2018.01.04 at 12h 22m 38s.xml">
+      <configuration name="TestField.testIsGameOver" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestField_testIsGameOver - 2018.01.04 at 12h 23m 25s.xml">
+      <configuration name="TestField.testIsGameOver" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestField_testIsGameOver - 2018.01.04 at 12h 23m 57s.xml">
+      <configuration name="TestField.testIsGameOver" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestField_testIsGameOver - 2018.01.04 at 12h 25m 17s.xml">
+      <configuration name="TestField.testIsGameOver" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="1302000" />
@@ -681,37 +755,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/field/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1273">
-          <caret line="76" column="40" lean-forward="false" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
-            <element signature="e#1566#1567#0" expanded="true" />
-            <element signature="e#1605#1606#0" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="true" />
-            <element signature="e#1682#1683#0" expanded="true" />
-            <element signature="e#1714#1715#0" expanded="true" />
-            <element signature="e#1756#1757#0" expanded="true" />
-            <element signature="e#1788#1789#0" expanded="true" />
-            <element signature="e#1835#1836#0" expanded="true" />
-            <element signature="e#1870#1871#0" expanded="true" />
-            <element signature="e#1909#1910#0" expanded="true" />
-            <element signature="e#1945#1946#0" expanded="true" />
-            <element signature="e#1990#1991#0" expanded="true" />
-            <element signature="e#2022#2023#0" expanded="true" />
-            <element signature="e#2061#2062#0" expanded="true" />
-            <element signature="e#2096#2097#0" expanded="true" />
-            <element signature="method#isRowHaveEnemy#0;class#Field#0" expanded="false" />
-            <element signature="method#getReady#0;class#Field#0" expanded="false" />
-            <element signature="method#CleanField#0;class#Field#0" expanded="false" />
-            <element signature="method#startRun#0;class#Field#0" expanded="false" />
-            <element signature="method#isGameOver#0;class#Field#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1330">
@@ -720,7 +763,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#5004#5333#0" expanded="true" />
             <element signature="e#5332#5333#0" expanded="true" />
-            <element signature="method#clickStartButton#0;class#Controller#0" expanded="false" />
             <element signature="e#5899#6374#0" expanded="true" />
             <element signature="e#6373#6374#0" expanded="true" />
             <element signature="method#clickHistoryButton#0;class#Controller#0" expanded="false" />
@@ -744,7 +786,7 @@
         <state relative-caret-position="190">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -847,7 +889,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#5004#5333#0" expanded="true" />
             <element signature="e#5332#5333#0" expanded="true" />
-            <element signature="method#clickStartButton#0;class#Controller#0" expanded="false" />
             <element signature="e#5899#6374#0" expanded="true" />
             <element signature="e#6373#6374#0" expanded="true" />
             <element signature="method#clickHistoryButton#0;class#Controller#0" expanded="false" />
@@ -893,7 +934,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#5004#5333#0" expanded="true" />
             <element signature="e#5332#5333#0" expanded="true" />
-            <element signature="method#clickStartButton#0;class#Controller#0" expanded="false" />
             <element signature="e#5899#6374#0" expanded="true" />
             <element signature="e#6373#6374#0" expanded="true" />
             <element signature="method#clickHistoryButton#0;class#Controller#0" expanded="false" />
@@ -923,6 +963,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="2596" column="0" lean-forward="false" selection-start-line="2596" selection-start-column="0" selection-end-line="2596" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1009,14 +1050,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/stratagem/Stratagem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -1053,7 +1086,7 @@
         <state relative-caret-position="285">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1063,11 +1096,11 @@
         <state relative-caret-position="209">
           <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#192#193#0" expanded="true" />
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#192#193#0" expanded="false" />
+            <element signature="e#276#277#0" expanded="false" />
+            <element signature="e#319#320#0" expanded="false" />
+            <element signature="e#347#348#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1080,16 +1113,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/creature/Xiaolouluo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="9" selection-end-column="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/creature/Xiezijing.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -1098,56 +1121,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/field/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
-            <element signature="e#1566#1567#0" expanded="true" />
-            <element signature="e#1605#1606#0" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="true" />
-            <element signature="e#1682#1683#0" expanded="true" />
-            <element signature="e#1714#1715#0" expanded="true" />
-            <element signature="e#1756#1757#0" expanded="true" />
-            <element signature="e#1788#1789#0" expanded="true" />
-            <element signature="e#1835#1836#0" expanded="true" />
-            <element signature="e#1870#1871#0" expanded="true" />
-            <element signature="e#1909#1910#0" expanded="true" />
-            <element signature="e#1945#1946#0" expanded="true" />
-            <element signature="e#1990#1991#0" expanded="true" />
-            <element signature="e#2022#2023#0" expanded="true" />
-            <element signature="e#2061#2062#0" expanded="true" />
-            <element signature="e#2096#2097#0" expanded="true" />
-            <element signature="method#isRowHaveEnemy#0;class#Field#0" expanded="false" />
-            <element signature="method#getReady#0;class#Field#0" expanded="false" />
-            <element signature="method#CleanField#0;class#Field#0" expanded="false" />
-            <element signature="method#startRun#0;class#Field#0" expanded="false" />
-            <element signature="method#isGameOver#0;class#Field#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/field/Position.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/creature/Huluwa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="139" column="14" lean-forward="false" selection-start-line="139" selection-start-column="14" selection-end-line="139" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2377#2378#0" expanded="true" />
-            <element signature="e#2406#2407#0" expanded="true" />
-            <element signature="e#2458#2459#0" expanded="true" />
-            <element signature="e#2484#2485#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1193,15 +1171,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/creature/Huluwa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3019">
+          <caret line="194" column="61" lean-forward="false" selection-start-line="194" selection-start-column="61" selection-end-line="194" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2377#2378#0" expanded="true" />
+            <element signature="e#2406#2407#0" expanded="true" />
+            <element signature="e#2458#2459#0" expanded="true" />
+            <element signature="e#2484#2485#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/creature/Xiaolouluo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="9" selection-end-column="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1772">
-          <caret line="327" column="29" lean-forward="false" selection-start-line="327" selection-start-column="29" selection-end-line="327" selection-end-column="29" />
+        <state relative-caret-position="2506">
+          <caret line="173" column="29" lean-forward="false" selection-start-line="173" selection-start-column="29" selection-end-line="173" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5004#5333#0" expanded="true" />
             <element signature="e#5332#5333#0" expanded="true" />
-            <element signature="method#clickStartButton#0;class#Controller#0" expanded="false" />
             <element signature="e#5899#6374#0" expanded="true" />
             <element signature="e#6373#6374#0" expanded="true" />
             <element signature="method#clickHistoryButton#0;class#Controller#0" expanded="false" />
@@ -1216,6 +1217,56 @@
             <element signature="e#11454#11455#0" expanded="true" />
             <element signature="e#13032#13033#0" expanded="true" />
             <element signature="e#13063#13064#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="e#1211#1212#0" expanded="true" />
+            <element signature="e#1239#1240#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/field/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-59">
+          <caret line="81" column="33" lean-forward="false" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1496#1497#0" expanded="true" />
+            <element signature="e#1528#1529#0" expanded="true" />
+            <element signature="e#1567#1568#0" expanded="true" />
+            <element signature="e#1602#1603#0" expanded="true" />
+            <element signature="e#1644#1645#0" expanded="true" />
+            <element signature="e#1676#1677#0" expanded="true" />
+            <element signature="e#1718#1719#0" expanded="true" />
+            <element signature="e#1750#1751#0" expanded="true" />
+            <element signature="e#1797#1798#0" expanded="true" />
+            <element signature="e#1832#1833#0" expanded="true" />
+            <element signature="e#1871#1872#0" expanded="true" />
+            <element signature="e#1907#1908#0" expanded="true" />
+            <element signature="e#1952#1953#0" expanded="true" />
+            <element signature="e#1984#1985#0" expanded="true" />
+            <element signature="e#2023#2024#0" expanded="true" />
+            <element signature="e#2058#2059#0" expanded="true" />
+            <element signature="method#isRowHaveEnemy#0;class#Field#0" expanded="false" />
+            <element signature="method#getReady#0;class#Field#0" expanded="false" />
+            <element signature="method#startRun#0;class#Field#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/TestField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

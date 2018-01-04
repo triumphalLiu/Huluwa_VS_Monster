@@ -15,7 +15,6 @@ public class Field {
     private String fieldDocument; //保存到文件
     private boolean runAllThread; //线程控制
     private boolean isDisplaying;
-    public Object obj = new Object();
 
     public Field() {    //创建出二维空间放置生物
         isDisplaying = false;

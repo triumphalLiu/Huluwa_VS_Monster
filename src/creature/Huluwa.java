@@ -192,7 +192,7 @@ public class Huluwa implements Creature {
                 }
             }
             if (this.isDead()) {
-                System.out.println("Huluwa " + getPosition() + " Died");
+                System.out.println("Huluwa " + getSeniority() + " Died");
                 thread.interrupt();
                 break;
             }
