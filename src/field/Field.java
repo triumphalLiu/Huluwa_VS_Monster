@@ -14,8 +14,11 @@ public class Field {
     private Creature[][] creatures;
     private String fieldDocument; //保存到文件
     private boolean runAllThread; //线程控制
+    private boolean isDisplaying;
+    public Object obj = new Object();
 
     public Field() {    //创建出二维空间放置生物
+        isDisplaying = false;
         fieldDocument = "";
         runAllThread = true;
         this.positions = new Position[sizeX][sizeY];
@@ -42,6 +45,14 @@ public class Field {
         this.creatures[x][y] = p;
         this.positions[x][y].setHolder(p);
         p.setPosition(this.positions[x][y]);
+    }
+
+    public void setIsDisplaying(boolean b){
+        isDisplaying = b;
+    }
+
+    public boolean getIsDisplaying(){
+        return isDisplaying;
     }
 
     public Position[][] getPositions() {

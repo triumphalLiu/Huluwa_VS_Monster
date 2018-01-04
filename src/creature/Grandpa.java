@@ -119,15 +119,18 @@ public class Grandpa implements Creature {
                         field.Add(position.getX(), position.getY() + 1, this);
                 }
             }
-            if(this.isDead()){
+            if (this.isDead()) {
                 System.out.println("Grandpa Die");
                 thread.interrupt();
                 break;
             }
             try {
-                Thread.sleep((int) (Math.random() * 1000) + 2000);
+                Thread.sleep((int) (Math.random() * 1000) + 1000);
+                while(field.getIsDisplaying())
+                    Thread.sleep(500);
             } catch (Exception e) {
-
+                thread.interrupt();
+                break;
             }
         }
     }

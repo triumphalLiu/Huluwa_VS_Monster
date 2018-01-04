@@ -97,16 +97,17 @@ public class Controller {
             cleanDeathPane();
             return;
         }
+        field.setIsDisplaying(true);
         //如果游戏结束 清空战斗场面 准备重新放置
         if(field.isGameOver() == 1) {
             cleanDeathPane();
-            cleanFieldPane();
+            //cleanFieldPane();
             winnerImageView.setImage(new Image(this.getClass().getResourceAsStream("/GoodGuyWins.png")));
             operationTipImageView.setImage(new Image(this.getClass().getResourceAsStream("/operationTip.png")));
         }
         else if(field.isGameOver() == -1) {
             cleanDeathPane();
-            cleanFieldPane();
+            //cleanFieldPane();
             winnerImageView.setImage(new Image(this.getClass().getResourceAsStream("/BadGuyWins.png")));
             operationTipImageView.setImage(new Image(this.getClass().getResourceAsStream("/operationTip.png")));
         }
@@ -134,6 +135,7 @@ public class Controller {
                 }
             }
         }
+        field.setIsDisplaying(false);
     }
 
     //游戏结束 对UI进行操作
@@ -323,7 +325,7 @@ public class Controller {
                                 }
                             }
                         }
-                    }, 200, 200);
+                    }, 500, 500);
                 }
             }
         }
