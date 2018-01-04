@@ -95,7 +95,7 @@ public class Grandpa implements Creature {
             if (len == 1) {
                 if (Math.random() > 0.4) {
                     this.setDead(true);
-                    System.out.println("Grandpa Die");
+                    //System.out.println("Grandpa Die");
                     thread.interrupt();
                     break;
                 }
@@ -135,7 +135,7 @@ public class Grandpa implements Creature {
                 }
             }
             if (this.isDead()) {
-                System.out.println("Grandpa Die");
+                //System.out.println("Grandpa Die");
                 thread.interrupt();
                 break;
             }

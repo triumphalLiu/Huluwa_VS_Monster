@@ -247,28 +247,33 @@ public class Field {
         }
         if(goodGuyAlive && badGuyAlive)
             return 0;
-        else if(goodGuyAlive) {//好人胜利 清空进程 摆造型
-            CleanField();
-            setRunAllThread(false);
-            for (int i = 0; i < 7; i++) {
-                this.Add(2+i, 4, new Huluwa(Huluwa.COLOR.values()[i], Huluwa.SENIORITY.values()[i], this));
-            }
-            this.Add(9,4,new Grandpa(this));
+        else if(goodGuyAlive)
             return 1;
-        }
-        else if(badGuyAlive){//坏人胜利 清空进程 摆造型
-            CleanField();
-            setRunAllThread(false);
-            for (int i = 0; i < 3; i++) {
-                this.Add(2+i, 4, new Xiaolouluo(this));
-            }
-            this.Add(5,4,new Xiezijing(this));
-            this.Add(6,4,new Snake(this));
-            for (int i = 0; i < 3; i++) {
-                this.Add(7+i, 4, new Xiaolouluo(this));
-            }
+        else if(badGuyAlive)
             return -1;
-        }
         else return 0x42;
+    }
+
+    public void showGoodGuyWin(){//好人胜利 清空进程 摆造型
+        setRunAllThread(false);
+        CleanField();
+        for (int i = 0; i < 7; i++) {
+            this.Add(2+i, 4, new Huluwa(Huluwa.COLOR.values()[i], Huluwa.SENIORITY.values()[i], this));
+        }
+        this.Add(9,4,new Grandpa(this));
+    }
+
+    public void showBadGuyWin(){
+        //坏人胜利 清空进程 摆造型
+        setRunAllThread(false);
+        CleanField();
+        for (int i = 0; i < 3; i++) {
+            this.Add(2+i, 4, new Xiaolouluo(this));
+        }
+        this.Add(5,4,new Xiezijing(this));
+        this.Add(6,4,new Snake(this));
+        for (int i = 0; i < 3; i++) {
+            this.Add(7+i, 4, new Xiaolouluo(this));
+        }
     }
 }

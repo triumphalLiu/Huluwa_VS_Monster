@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Grandpa.java" afterPath="$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Grandpa.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Huluwa.java" afterPath="$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Huluwa.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Monster.java" afterPath="$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Monster.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/triumphal/field/Field.java" afterPath="$PROJECT_DIR$/src/main/java/cn/triumphal/field/Field.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Controller.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -66,7 +67,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
@@ -79,8 +80,8 @@
       <file leaf-file-name="Field.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/field/Field.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2679">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="2620">
+              <caret line="267" column="8" lean-forward="false" selection-start-line="267" selection-start-column="8" selection-end-line="267" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#isRowHaveEnemy#0;class#Field#0" expanded="false" />
@@ -91,14 +92,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FileModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/frame/FileModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="293" column="46" lean-forward="true" selection-start-line="293" selection-start-column="46" selection-end-line="293" selection-end-column="46" />
+            <state relative-caret-position="282">
+              <caret line="302" column="43" lean-forward="false" selection-start-line="302" selection-start-column="43" selection-end-line="302" selection-end-column="43" />
               <folding>
                 <element signature="method#clickHistoryButton#0;class#Controller#0" expanded="false" />
                 <element signature="method#clickAboutButton#0;class#Controller#0" expanded="false" />
+                <element signature="e#9814#10227#0" expanded="true" />
+                <element signature="e#10226#10227#0" expanded="true" />
+                <element signature="e#11455#12621#0" expanded="true" />
+                <element signature="e#12620#12621#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -107,8 +122,8 @@
       <file leaf-file-name="Grandpa.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Grandpa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="102" column="61" lean-forward="false" selection-start-line="102" selection-start-column="61" selection-end-line="102" selection-end-column="61" />
+            <state relative-caret-position="777">
+              <caret line="97" column="22" lean-forward="false" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -117,8 +132,8 @@
       <file leaf-file-name="Huluwa.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Huluwa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="175" column="71" lean-forward="false" selection-start-line="175" selection-start-column="71" selection-end-line="175" selection-end-column="71" />
+            <state relative-caret-position="207">
+              <caret line="169" column="22" lean-forward="false" selection-start-line="169" selection-start-column="22" selection-end-line="169" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -127,8 +142,8 @@
       <file leaf-file-name="Monster.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Monster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="97" column="61" lean-forward="false" selection-start-line="97" selection-start-column="61" selection-end-line="98" selection-end-column="71" />
+            <state relative-caret-position="283">
+              <caret line="132" column="18" lean-forward="false" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -159,6 +174,7 @@
       <find>new Image</find>
       <find>field.saveCurrentField();</find>
       <find>field.saveCurrentField()</find>
+      <find>System.out.print</find>
     </findStrings>
     <replaceStrings>
       <replace>true</replace>
@@ -212,7 +228,6 @@
         <option value="$PROJECT_DIR$/src/creature/Huluwa.java" />
         <option value="$PROJECT_DIR$/src/field/Field.java" />
         <option value="$PROJECT_DIR$/test/TestField.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/triumphal/field/Field.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/triumphal/field/Position.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestField.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/triumphal/sample/Main.java" />
@@ -220,10 +235,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/sample.fxml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Monster.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Huluwa.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Grandpa.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Huluwa.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Monster.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/triumphal/field/Field.java" />
       </list>
     </option>
   </component>
@@ -252,7 +268,7 @@
     </treeState>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1612" />
@@ -691,9 +707,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestField - 2018.01.04 at 12h 16m 28s.xml">
-      <configuration name="TestField" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestField - 2018.01.04 at 12h 19m 01s.xml">
       <configuration name="TestField" configurationId="JUnit" />
     </history-entry>
@@ -704,6 +717,9 @@
       <configuration name="TestField" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TestField - 2018.01.04 at 13h 24m 45s.xml">
+      <configuration name="TestField" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestField - 2018.01.04 at 16h 06m 25s.xml">
       <configuration name="TestField" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TestField_testAddCreature - 2018.01.04 at 12h 15m 20s.xml">
@@ -726,8 +742,7 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -736,12 +751,12 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32346722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32346722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229167" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229167" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Log Manager" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -772,7 +787,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -840,6 +855,10 @@
           <folding>
             <element signature="method#clickHistoryButton#0;class#Controller#0" expanded="false" />
             <element signature="method#clickAboutButton#0;class#Controller#0" expanded="false" />
+            <element signature="e#9814#10227#0" expanded="true" />
+            <element signature="e#10226#10227#0" expanded="true" />
+            <element signature="e#11455#12621#0" expanded="true" />
+            <element signature="e#12620#12621#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -869,6 +888,10 @@
           <folding>
             <element signature="method#clickHistoryButton#0;class#Controller#0" expanded="false" />
             <element signature="method#clickAboutButton#0;class#Controller#0" expanded="false" />
+            <element signature="e#9814#10227#0" expanded="true" />
+            <element signature="e#10226#10227#0" expanded="true" />
+            <element signature="e#11455#12621#0" expanded="true" />
+            <element signature="e#12620#12621#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1081,14 +1104,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/frame/FileModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/cn/triumphal/creature/Xiezijing.class" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/field/Position.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1106,10 +1121,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Grandpa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="97" column="22" lean-forward="false" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Huluwa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="169" column="22" lean-forward="false" selection-start-line="169" selection-start-column="22" selection-end-line="169" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Monster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="132" column="18" lean-forward="false" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="302" column="43" lean-forward="false" selection-start-line="302" selection-start-column="43" selection-end-line="302" selection-end-column="43" />
+          <folding>
+            <element signature="method#clickHistoryButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#clickAboutButton#0;class#Controller#0" expanded="false" />
+            <element signature="e#9814#10227#0" expanded="true" />
+            <element signature="e#10226#10227#0" expanded="true" />
+            <element signature="e#11455#12621#0" expanded="true" />
+            <element signature="e#12620#12621#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/frame/FileModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/field/Field.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2679">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="2620">
+          <caret line="267" column="8" lean-forward="false" selection-start-line="267" selection-start-column="8" selection-end-line="267" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#isRowHaveEnemy#0;class#Field#0" expanded="false" />
@@ -1124,41 +1186,6 @@
         <state relative-caret-position="264">
           <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Monster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="97" column="61" lean-forward="false" selection-start-line="97" selection-start-column="61" selection-end-line="98" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Huluwa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="175" column="71" lean-forward="false" selection-start-line="175" selection-start-column="71" selection-end-line="175" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/creature/Grandpa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="102" column="61" lean-forward="false" selection-start-line="102" selection-start-column="61" selection-end-line="102" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="293" column="46" lean-forward="true" selection-start-line="293" selection-start-column="46" selection-end-line="293" selection-end-column="46" />
-          <folding>
-            <element signature="method#clickHistoryButton#0;class#Controller#0" expanded="false" />
-            <element signature="method#clickAboutButton#0;class#Controller#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>

@@ -90,7 +90,7 @@ public class Monster implements Creature{
             if (len == 1) {
                 if (Math.random() > 0.5) {
                     this.setDead(true);
-                    System.out.println("Monster " + this.getClass().getSimpleName() + " Died");
+                    //System.out.println("Monster " + this.getClass().getSimpleName() + " Died");
                     thread.interrupt();
                     break;
                 }
@@ -130,7 +130,7 @@ public class Monster implements Creature{
                 }
             }
             if (this.isDead()) {
-                System.out.println("Monster " + this.getClass().getSimpleName() + " Died");
+                //System.out.println("Monster " + this.getClass().getSimpleName() + " Died");
                 thread.interrupt();
                 break;
             }

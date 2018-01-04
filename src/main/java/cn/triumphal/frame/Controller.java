@@ -55,6 +55,7 @@ public class Controller {
     private Field field;
     private int Mode; //0=not start 1= new game 2=history game 3=newgame finish 4=history finish
     private int Step; //history step
+    private int Winner; //winner
     private String historyFilename;
     private boolean isRunning;
     private Image emptyImg = null;
@@ -64,6 +65,7 @@ public class Controller {
         isRunning = false;
         Mode = 0;
         Step = 0;
+        Winner = 0;
         field = null;
         historyFilename = "";
         mainPane.setFocusTraversable(true);
@@ -122,8 +124,6 @@ public class Controller {
         for(int i = 0; i < field.sizeX; ++i) {
             for (int j = 0; j < field.sizeY; ++j) {
                 if(!field.getCreatures()[i][j].getClass().getSimpleName().equals("Space") && field.getCreatures()[i][j].isDead()){
-                    if(field.getCreatures()[i][j].getClass().getSimpleName().equals("Grandpa"))
-                        System.out.printf("%d %d %n",i, j);
                     ImageView tmp = (ImageView) deathPane.getChildren().get(field.sizeX * j + i);
                     tmp.setImage(field.getCreatures()[i][j].report());
                     field.Delete(i, j);
@@ -205,7 +205,8 @@ public class Controller {
             //UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         }
         catch(Exception e) {
-            System.out.println(e.getStackTrace());
+            e.printStackTrace();
+            //System.out.println(e.getStackTrace());
         }
         //打开选择文件对话框
         JFileChooser jFileChooser = new JFileChooser(".");
@@ -217,7 +218,7 @@ public class Controller {
         jFileChooser.showOpenDialog(null);
         File file = jFileChooser.getSelectedFile();
         if(file != null && file.exists()) {
-            System.out.println("文件:" + file.getAbsolutePath());
+            //System.out.println("文件:" + file.getAbsolutePath());
             winnerImageView.setVisible(true);
             operationTipImageView.setVisible(true);
             startButton.setVisible(false);
@@ -289,12 +290,12 @@ public class Controller {
                         public void run() {
                             int wins = field.isGameOver();
                             if (wins != 0) {
-                                Mode = 3;
-                                isRunning = false;
                                 this.cancel();
+                                Mode = 3;
+                                Winner = wins;
                             }
                         }
-                    },1000,1000);
+                    },800,800);
                     Timer timer = new Timer();
                     timer.schedule(new TimerTask() {
                         @Override
@@ -302,6 +303,14 @@ public class Controller {
                             display(field);
                             if(Mode != 1) {
                                 this.cancel();
+                                cleanFieldPane();
+                                cleanDeathPane();
+                                if(Winner == 1)
+                                    field.showGoodGuyWin();
+                                else if(Winner == -1)
+                                    field.showBadGuyWin();
+                                display(field);
+                                isRunning = false;
                             }
                         }
                     }, 300, 300);
@@ -327,9 +336,16 @@ public class Controller {
                                 display(field);
                                 int wins = field.isGameOver();
                                 if (wins != 0) {
-                                    Mode = 4;
-                                    isRunning = false;
                                     this.cancel();
+                                    Mode = 4;
+                                    cleanFieldPane();
+                                    cleanDeathPane();
+                                    if(wins == 1)
+                                        field.showGoodGuyWin();
+                                    else if(wins == -1)
+                                        field.showBadGuyWin();
+                                    display(field);
+                                    isRunning = false;
                                 }
                             }
                         }
@@ -357,7 +373,7 @@ public class Controller {
                     if (!file.getPath().endsWith(".hlw")) {
                         file = new File(file.getPath() + ".hlw");
                     }
-                    System.out.println("file path = " + file.getAbsolutePath());
+                    //System.out.println("file path = " + file.getAbsolutePath());
                     try {
                         if (!file.exists()) {
                             file.createNewFile();

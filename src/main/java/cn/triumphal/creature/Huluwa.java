@@ -167,7 +167,7 @@ public class Huluwa implements Creature {
             if (len == 1) {
                 if (Math.random() > 0.6) {
                     this.setDead(true);
-                    System.out.println("Huluwa " + getSeniority() + " Died");
+                    //System.out.println("Huluwa " + getSeniority() + " Died");
                     thread.interrupt();
                     break;
                 }
@@ -207,7 +207,7 @@ public class Huluwa implements Creature {
                 }
             }
             if (this.isDead()) {
-                System.out.println("Huluwa " + getSeniority() + " Died");
+                //System.out.println("Huluwa " + getSeniority() + " Died");
                 thread.interrupt();
                 break;
             }
