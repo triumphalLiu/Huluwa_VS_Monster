@@ -77,12 +77,27 @@ public class Monster implements Creature{
                     }
                 }
             }
+            while(field.getIsDisplaying()) {
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                    thread.interrupt();
+                    break;
+                }
+            }
             //距离小于1就打起来
             if (len == 1) {
-                if (Math.random() > 0.5)
+                if (Math.random() > 0.5) {
                     this.setDead(true);
-                else
+                    System.out.println("Monster " + this.getClass().getSimpleName() + " Died");
+                    thread.interrupt();
+                    break;
+                }
+                else {
                     field.getCreatures()[x][y].setDead(true);
+                    field.getCreatures()[x][y].getThread().interrupt();
+                }
             }
             //否则看这一排还有没有对手
             else if (field.isRowHaveEnemy(this)) {
@@ -121,8 +136,6 @@ public class Monster implements Creature{
             }
             try {
                 Thread.sleep((int) (Math.random() * 1000) + 1000);
-                while(field.getIsDisplaying())
-                    Thread.sleep(500);
             } catch (Exception e) {
                 thread.interrupt();
                 break;

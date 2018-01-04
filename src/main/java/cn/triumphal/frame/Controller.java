@@ -1,5 +1,6 @@
 package cn.triumphal.frame;
 
+import cn.triumphal.creature.Grandpa;
 import cn.triumphal.field.Field;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
@@ -98,6 +99,7 @@ public class Controller {
             return;
         }
         field.setIsDisplaying(true);
+        field.saveCurrentField();
         //如果游戏结束 清空战斗场面 准备重新放置
         if(field.isGameOver() == 1) {
             cleanDeathPane();
@@ -120,6 +122,8 @@ public class Controller {
         for(int i = 0; i < field.sizeX; ++i) {
             for (int j = 0; j < field.sizeY; ++j) {
                 if(!field.getCreatures()[i][j].getClass().getSimpleName().equals("Space") && field.getCreatures()[i][j].isDead()){
+                    if(field.getCreatures()[i][j].getClass().getSimpleName().equals("Grandpa"))
+                        System.out.printf("%d %d %n",i, j);
                     ImageView tmp = (ImageView) deathPane.getChildren().get(field.sizeX * j + i);
                     tmp.setImage(field.getCreatures()[i][j].report());
                     field.Delete(i, j);
@@ -188,7 +192,6 @@ public class Controller {
                 Mode = 1;
                 field = new Field();
                 field.getReady();
-                field.saveCurrentField();
                 display(field);
                 this.cancel();
             }
@@ -265,6 +268,12 @@ public class Controller {
         if(Mode == 0){
             if(keyEvent.getCode() == KeyCode.L)
                 clickHistoryButton(null);
+            else if(keyEvent.getCode() == KeyCode.Q)
+                System.exit(0);
+            else if(keyEvent.getCode() == KeyCode.S)
+                clickStartButton(null);
+            else if(keyEvent.getCode() == KeyCode.ESCAPE)
+                System.exit(0);
         }
         //新游戏界面
         else if(Mode == 1){ //new Game
@@ -290,13 +299,12 @@ public class Controller {
                     timer.schedule(new TimerTask() {
                         @Override
                         public void run() {
-                            field.saveCurrentField();
                             display(field);
                             if(Mode != 1) {
                                 this.cancel();
                             }
                         }
-                    }, 500, 500);
+                    }, 300, 300);
                 }
             }
         }
