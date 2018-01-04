@@ -1,4 +1,4 @@
-package cn.triumphal.sample;
+package cn.triumphal.frame;
 
 import cn.triumphal.field.Field;
 import javafx.fxml.FXML;

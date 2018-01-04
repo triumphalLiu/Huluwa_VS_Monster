@@ -2,102 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Huluwa_VS_Monster.iml" afterPath="$PROJECT_DIR$/Huluwa_VS_Monster.iml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/Background.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/BadGuyWins.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/Blue.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/BlueDead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/Cyan.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/CyanDead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/Empty.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/GoodGuyWins.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/Grandpa.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/GrandpaDead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/Green.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/GreenDead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/LittleMonster.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/LittleMonsterDead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/Orange.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/OrangeDead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/Purple.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/PurpleDead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/Red.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/RedDead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/Snake.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/SnakeDead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/Xiezijing.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/XiezijingDead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/Yellow.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/YellowDead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/aboutImage.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/exitImage.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/fightScene1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/fightScene2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/historyImage.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/operationTip.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/sample/sample.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/startImage.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Huluwa_VS_Monster/title.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/resources/Background.png" afterPath="$PROJECT_DIR$/src/main/resources/Background.png" />
-      <change beforePath="$PROJECT_DIR$/resources/BadGuyWins.png" afterPath="$PROJECT_DIR$/src/main/resources/BadGuyWins.png" />
-      <change beforePath="$PROJECT_DIR$/resources/Blue.png" afterPath="$PROJECT_DIR$/src/main/resources/Blue.png" />
-      <change beforePath="$PROJECT_DIR$/resources/BlueDead.png" afterPath="$PROJECT_DIR$/src/main/resources/BlueDead.png" />
-      <change beforePath="$PROJECT_DIR$/resources/Cyan.png" afterPath="$PROJECT_DIR$/src/main/resources/Cyan.png" />
-      <change beforePath="$PROJECT_DIR$/resources/CyanDead.png" afterPath="$PROJECT_DIR$/src/main/resources/CyanDead.png" />
-      <change beforePath="$PROJECT_DIR$/resources/Empty.png" afterPath="$PROJECT_DIR$/src/main/resources/Empty.png" />
-      <change beforePath="$PROJECT_DIR$/resources/GoodGuyWins.png" afterPath="$PROJECT_DIR$/src/main/resources/GoodGuyWins.png" />
-      <change beforePath="$PROJECT_DIR$/resources/Grandpa.png" afterPath="$PROJECT_DIR$/src/main/resources/Grandpa.png" />
-      <change beforePath="$PROJECT_DIR$/resources/GrandpaDead.png" afterPath="$PROJECT_DIR$/src/main/resources/GrandpaDead.png" />
-      <change beforePath="$PROJECT_DIR$/resources/Green.png" afterPath="$PROJECT_DIR$/src/main/resources/Green.png" />
-      <change beforePath="$PROJECT_DIR$/resources/GreenDead.png" afterPath="$PROJECT_DIR$/src/main/resources/GreenDead.png" />
-      <change beforePath="$PROJECT_DIR$/resources/LittleMonster.png" afterPath="$PROJECT_DIR$/src/main/resources/LittleMonster.png" />
-      <change beforePath="$PROJECT_DIR$/resources/LittleMonsterDead.png" afterPath="$PROJECT_DIR$/src/main/resources/LittleMonsterDead.png" />
-      <change beforePath="$PROJECT_DIR$/resources/Orange.png" afterPath="$PROJECT_DIR$/src/main/resources/Orange.png" />
-      <change beforePath="$PROJECT_DIR$/resources/OrangeDead.png" afterPath="$PROJECT_DIR$/src/main/resources/OrangeDead.png" />
-      <change beforePath="$PROJECT_DIR$/resources/Purple.png" afterPath="$PROJECT_DIR$/src/main/resources/Purple.png" />
-      <change beforePath="$PROJECT_DIR$/resources/PurpleDead.png" afterPath="$PROJECT_DIR$/src/main/resources/PurpleDead.png" />
-      <change beforePath="$PROJECT_DIR$/resources/Red.png" afterPath="$PROJECT_DIR$/src/main/resources/Red.png" />
-      <change beforePath="$PROJECT_DIR$/resources/RedDead.png" afterPath="$PROJECT_DIR$/src/main/resources/RedDead.png" />
-      <change beforePath="$PROJECT_DIR$/resources/Snake.png" afterPath="$PROJECT_DIR$/src/main/resources/Snake.png" />
-      <change beforePath="$PROJECT_DIR$/resources/SnakeDead.png" afterPath="$PROJECT_DIR$/src/main/resources/SnakeDead.png" />
-      <change beforePath="$PROJECT_DIR$/resources/Xiezijing.png" afterPath="$PROJECT_DIR$/src/main/resources/Xiezijing.png" />
-      <change beforePath="$PROJECT_DIR$/resources/XiezijingDead.png" afterPath="$PROJECT_DIR$/src/main/resources/XiezijingDead.png" />
-      <change beforePath="$PROJECT_DIR$/resources/Yellow.png" afterPath="$PROJECT_DIR$/src/main/resources/Yellow.png" />
-      <change beforePath="$PROJECT_DIR$/resources/YellowDead.png" afterPath="$PROJECT_DIR$/src/main/resources/YellowDead.png" />
-      <change beforePath="$PROJECT_DIR$/resources/aboutImage.png" afterPath="$PROJECT_DIR$/src/main/resources/aboutImage.png" />
-      <change beforePath="$PROJECT_DIR$/resources/exitImage.png" afterPath="$PROJECT_DIR$/src/main/resources/exitImage.png" />
-      <change beforePath="$PROJECT_DIR$/resources/fightScene1.png" afterPath="$PROJECT_DIR$/src/main/resources/fightScene1.png" />
-      <change beforePath="$PROJECT_DIR$/resources/fightScene2.png" afterPath="$PROJECT_DIR$/src/main/resources/fightScene2.png" />
-      <change beforePath="$PROJECT_DIR$/resources/historyImage.png" afterPath="$PROJECT_DIR$/src/main/resources/historyImage.png" />
-      <change beforePath="$PROJECT_DIR$/resources/icon.png" afterPath="$PROJECT_DIR$/src/main/resources/icon.png" />
-      <change beforePath="$PROJECT_DIR$/resources/operationTip.png" afterPath="$PROJECT_DIR$/src/main/resources/operationTip.png" />
-      <change beforePath="$PROJECT_DIR$/resources/startImage.png" afterPath="$PROJECT_DIR$/src/main/resources/startImage.png" />
-      <change beforePath="$PROJECT_DIR$/resources/title.png" afterPath="$PROJECT_DIR$/src/main/resources/title.png" />
-      <change beforePath="$PROJECT_DIR$/src/creature/Creature.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/creature/Grandpa.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/creature/Huluwa.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/creature/Monster.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/creature/Snake.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/creature/Space.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/creature/Xiaolouluo.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/creature/Xiezijing.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/field/Field.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/field/Position.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Animation.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FileModel.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/stratagem/ChangsheStratagem.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/stratagem/HeyiStratagem.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/stratagem/Stratagem.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/stratagem/YanxingStratagem.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test/TestField.java" afterPath="$PROJECT_DIR$/src/test/java/TestField.java" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/triumphal/sample/Animation.java" afterPath="$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Animation.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/triumphal/sample/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Controller.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/triumphal/sample/FileModel.java" afterPath="$PROJECT_DIR$/src/main/java/cn/triumphal/frame/FileModel.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/triumphal/sample/Main.java" afterPath="$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sample.fxml" afterPath="$PROJECT_DIR$/src/main/resources/sample.fxml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Background.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/BadGuyWins.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Blue.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/BlueDead.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Cyan.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CyanDead.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Empty.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoodGuyWins.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Grandpa.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GrandpaDead.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Green.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GreenDead.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LittleMonster.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LittleMonsterDead.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Orange.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OrangeDead.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Purple.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PurpleDead.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Red.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RedDead.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Snake.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SnakeDead.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Xiezijing.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/XiezijingDead.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Yellow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/YellowDead.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aboutImage.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exitImage.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fightScene1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fightScene2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/historyImage.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/operationTip.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample.fxml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/startImage.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/title.png" afterPath="" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -155,136 +102,7 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Field.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/field/Field.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-              <folding>
-                <element signature="e#1548#1549#0" expanded="true" />
-                <element signature="e#1580#1581#0" expanded="true" />
-                <element signature="e#1619#1620#0" expanded="true" />
-                <element signature="e#1654#1655#0" expanded="true" />
-                <element signature="e#1696#1697#0" expanded="true" />
-                <element signature="e#1728#1729#0" expanded="true" />
-                <element signature="e#1770#1771#0" expanded="true" />
-                <element signature="e#1802#1803#0" expanded="true" />
-                <element signature="e#1849#1850#0" expanded="true" />
-                <element signature="e#1884#1885#0" expanded="true" />
-                <element signature="e#1923#1924#0" expanded="true" />
-                <element signature="e#1959#1960#0" expanded="true" />
-                <element signature="e#2004#2005#0" expanded="true" />
-                <element signature="e#2036#2037#0" expanded="true" />
-                <element signature="e#2075#2076#0" expanded="true" />
-                <element signature="e#2110#2111#0" expanded="true" />
-                <element signature="method#isRowHaveEnemy#0;class#Field#0" expanded="false" />
-                <element signature="method#getReady#0;class#Field#0" expanded="false" />
-                <element signature="method#startRun#0;class#Field#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Position.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/field/Position.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestField.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestField.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/sample/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="61" column="33" lean-forward="false" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
-              <folding>
-                <element signature="method#clickHistoryButton#0;class#Controller#0" expanded="false" />
-                <element signature="method#clickAboutButton#0;class#Controller#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/sample.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="43" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="misc.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modules.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uiDesigner.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/sample/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="18" column="51" lean-forward="true" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -360,13 +178,14 @@
         <option value="$PROJECT_DIR$/src/creature/Huluwa.java" />
         <option value="$PROJECT_DIR$/src/field/Field.java" />
         <option value="$PROJECT_DIR$/test/TestField.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/triumphal/field/Field.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/triumphal/field/Position.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestField.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/triumphal/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/triumphal/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/resources/sample.fxml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Main.java" />
       </list>
     </option>
   </component>
@@ -382,6 +201,17 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Huluwa_VS_Monster" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
@@ -452,51 +282,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="triumphal" type="462c0819:PsiDirectoryNode" />
-              <item name="creature" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Huluwa_VS_Monster" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Huluwa_VS_Monster" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="triumphal" type="462c0819:PsiDirectoryNode" />
-              <item name="field" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Huluwa_VS_Monster" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Huluwa_VS_Monster" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="triumphal" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Huluwa_VS_Monster" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Huluwa_VS_Monster" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="triumphal" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="Huluwa_VS_Monster" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Huluwa_VS_Monster" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="triumphal" type="462c0819:PsiDirectoryNode" />
-              <item name="stratagem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Huluwa_VS_Monster" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Huluwa_VS_Monster" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="frame" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Huluwa_VS_Monster" type="b2602c69:ProjectViewProjectNode" />
@@ -510,17 +296,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Huluwa_VS_Monster" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Huluwa_VS_Monster" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Huluwa_VS_Monster" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Huluwa_VS_Monster" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -572,7 +347,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestField">
+  <component name="RunManager" selected="Application.Main (2)">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module />
       <option name="HTML_USED" value="false" />
@@ -589,25 +364,6 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="MainFrame.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Huluwa_VS_Monster" />
-      <envs />
-    </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="cn.triumphal.sample.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="cn.triumphal.sample.Main" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -639,6 +395,25 @@
       <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cn.triumphal.frame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="cn.triumphal.frame.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Huluwa_VS_Monster" />
+      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -796,8 +571,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestField" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main (2)" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main (2)" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestField" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.TestField.testIsGameOver" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.TestField.testAddCreature" />
         <item index="4" class="java.lang.String" itemvalue="Application.Main (1)" />
@@ -858,19 +633,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32346722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32346722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229167" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18229167" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -928,18 +702,7 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="60" column="23" lean-forward="false" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/sample/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
@@ -980,33 +743,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/sample/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1463">
           <caret line="95" column="15" lean-forward="true" selection-start-line="95" selection-start-column="15" selection-end-line="95" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#5030#5359#0" expanded="false" />
-            <element signature="e#5358#5359#0" expanded="false" />
-            <element signature="e#5925#6400#0" expanded="false" />
-            <element signature="e#6399#6400#0" expanded="false" />
+            <element signature="e#5029#5358#0" expanded="false" />
+            <element signature="e#5357#5358#0" expanded="false" />
+            <element signature="e#5924#6399#0" expanded="false" />
+            <element signature="e#6398#6399#0" expanded="false" />
             <element signature="method#clickHistoryButton#0;class#Controller#0" expanded="false" />
-            <element signature="e#7901#8394#0" expanded="false" />
-            <element signature="e#8393#8394#0" expanded="false" />
+            <element signature="e#7900#8393#0" expanded="false" />
+            <element signature="e#8392#8393#0" expanded="false" />
             <element signature="method#clickAboutButton#0;class#Controller#0" expanded="false" />
-            <element signature="e#9427#9844#0" expanded="false" />
-            <element signature="e#9843#9844#0" expanded="false" />
-            <element signature="e#9939#10301#0" expanded="false" />
-            <element signature="e#10300#10301#0" expanded="false" />
-            <element signature="e#10708#11481#0" expanded="false" />
-            <element signature="e#11480#11481#0" expanded="false" />
-            <element signature="e#13058#13059#0" expanded="false" />
-            <element signature="e#13089#13090#0" expanded="false" />
+            <element signature="e#9426#9843#0" expanded="false" />
+            <element signature="e#9842#9843#0" expanded="false" />
+            <element signature="e#9938#10300#0" expanded="false" />
+            <element signature="e#10299#10300#0" expanded="false" />
+            <element signature="e#10707#11480#0" expanded="false" />
+            <element signature="e#11479#11480#0" expanded="false" />
+            <element signature="e#13057#13058#0" expanded="false" />
+            <element signature="e#13088#13089#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/sample/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
@@ -1025,28 +788,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/sample/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#5030#5359#0" expanded="false" />
-            <element signature="e#5358#5359#0" expanded="false" />
-            <element signature="e#5925#6400#0" expanded="false" />
-            <element signature="e#6399#6400#0" expanded="false" />
+            <element signature="e#5029#5358#0" expanded="false" />
+            <element signature="e#5357#5358#0" expanded="false" />
+            <element signature="e#5924#6399#0" expanded="false" />
+            <element signature="e#6398#6399#0" expanded="false" />
             <element signature="method#clickHistoryButton#0;class#Controller#0" expanded="false" />
-            <element signature="e#7901#8394#0" expanded="false" />
-            <element signature="e#8393#8394#0" expanded="false" />
+            <element signature="e#7900#8393#0" expanded="false" />
+            <element signature="e#8392#8393#0" expanded="false" />
             <element signature="method#clickAboutButton#0;class#Controller#0" expanded="false" />
-            <element signature="e#9427#9844#0" expanded="false" />
-            <element signature="e#9843#9844#0" expanded="false" />
-            <element signature="e#9939#10301#0" expanded="false" />
-            <element signature="e#10300#10301#0" expanded="false" />
-            <element signature="e#10708#11481#0" expanded="false" />
-            <element signature="e#11480#11481#0" expanded="false" />
-            <element signature="e#13058#13059#0" expanded="false" />
-            <element signature="e#13089#13090#0" expanded="false" />
+            <element signature="e#9426#9843#0" expanded="false" />
+            <element signature="e#9842#9843#0" expanded="false" />
+            <element signature="e#9938#10300#0" expanded="false" />
+            <element signature="e#10299#10300#0" expanded="false" />
+            <element signature="e#10707#11480#0" expanded="false" />
+            <element signature="e#11479#11480#0" expanded="false" />
+            <element signature="e#13057#13058#0" expanded="false" />
+            <element signature="e#13088#13089#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1124,16 +887,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stratagem/FengshiStratagem.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/sample/FileModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/stratagem/Stratagem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -1274,16 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/sample/Animation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1332,11 +1075,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sample.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        <state relative-caret-position="437">
+          <caret line="23" column="10" lean-forward="true" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Animation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="366" column="6" lean-forward="false" selection-start-line="366" selection-start-column="6" selection-end-line="366" selection-end-column="6" />
+          <folding>
+            <element signature="method#clickHistoryButton#0;class#Controller#0" expanded="false" />
+            <element signature="method#clickAboutButton#0;class#Controller#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/frame/FileModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/cn/triumphal/creature/Xiezijing.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/frame/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1353,65 +1162,25 @@
         <state relative-caret-position="76">
           <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
           <folding>
-            <element signature="e#1548#1549#0" expanded="true" />
-            <element signature="e#1580#1581#0" expanded="true" />
-            <element signature="e#1619#1620#0" expanded="true" />
-            <element signature="e#1654#1655#0" expanded="true" />
-            <element signature="e#1696#1697#0" expanded="true" />
-            <element signature="e#1728#1729#0" expanded="true" />
-            <element signature="e#1770#1771#0" expanded="true" />
-            <element signature="e#1802#1803#0" expanded="true" />
-            <element signature="e#1849#1850#0" expanded="true" />
-            <element signature="e#1884#1885#0" expanded="true" />
-            <element signature="e#1923#1924#0" expanded="true" />
-            <element signature="e#1959#1960#0" expanded="true" />
-            <element signature="e#2004#2005#0" expanded="true" />
-            <element signature="e#2036#2037#0" expanded="true" />
-            <element signature="e#2075#2076#0" expanded="true" />
-            <element signature="e#2110#2111#0" expanded="true" />
+            <element signature="e#1548#1549#0" expanded="false" />
+            <element signature="e#1580#1581#0" expanded="false" />
+            <element signature="e#1619#1620#0" expanded="false" />
+            <element signature="e#1654#1655#0" expanded="false" />
+            <element signature="e#1696#1697#0" expanded="false" />
+            <element signature="e#1728#1729#0" expanded="false" />
+            <element signature="e#1770#1771#0" expanded="false" />
+            <element signature="e#1802#1803#0" expanded="false" />
+            <element signature="e#1849#1850#0" expanded="false" />
+            <element signature="e#1884#1885#0" expanded="false" />
+            <element signature="e#1923#1924#0" expanded="false" />
+            <element signature="e#1959#1960#0" expanded="false" />
+            <element signature="e#2004#2005#0" expanded="false" />
+            <element signature="e#2036#2037#0" expanded="false" />
+            <element signature="e#2075#2076#0" expanded="false" />
+            <element signature="e#2110#2111#0" expanded="false" />
             <element signature="method#isRowHaveEnemy#0;class#Field#0" expanded="false" />
             <element signature="method#getReady#0;class#Field#0" expanded="false" />
             <element signature="method#startRun#0;class#Field#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="18" column="51" lean-forward="true" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="43" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/triumphal/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="61" column="33" lean-forward="false" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
-          <folding>
-            <element signature="method#clickHistoryButton#0;class#Controller#0" expanded="false" />
-            <element signature="method#clickAboutButton#0;class#Controller#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

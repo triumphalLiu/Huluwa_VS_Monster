@@ -1,4 +1,4 @@
-package cn.triumphal.sample;
+package cn.triumphal.frame;
 
 import java.io.File;
 import java.io.FileNotFoundException;

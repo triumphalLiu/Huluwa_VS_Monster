@@ -1,4 +1,4 @@
-package cn.triumphal.sample;
+package cn.triumphal.frame;
 
 import javafx.application.Application;
 import javafx.event.EventHandler;

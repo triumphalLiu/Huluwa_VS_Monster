@@ -1,4 +1,4 @@
-package cn.triumphal.sample;
+package cn.triumphal.frame;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
